@@ -1,0 +1,2495 @@
+
+.div(@width:100%,@height:auto){
+  width: @width;
+  height: @height;
+}
+.fonts(@fs:0.16rem,@color:black,@fw:normal,@ff:Arial){font-size: @fs;color: @color;font-weight: @fw;font-family: @ff}
+@hide:{display: none};
+*{
+  margin: 0;
+  padding: 0;
+}
+.backimg(@x:100%,@y:100%){
+  background-size: @x @y;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+div,input,textarea,span,a{
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+}
+div,input,textarea,span,a:focus{
+  text-decoration: none;
+}
+a:active,a:hover{
+  text-decoration: none;
+}
+html,body{
+  .div(100%,100%);
+  background-color: transparent;
+}
+
+
+@media only screen//平板样式
+and (min-device-width : 768px)
+and (max-device-width : 1024px) {
+  html[data-page='index'] #SY_mukuai2>a:last-child>div{
+    .fonts(0.2rem,white,400)!important;
+    top: 0.6rem!important;
+  }
+
+  html[data-page='index'] #SY_mukuai1>.SiXiao>div>a>div:nth-child(1){
+    .div(45%,0.3rem)!important;
+    line-height: 0.3rem!important;
+  }
+
+  html[data-page='login'] #Tab>div>div.txt.act>.radio>input[type="radio"] + label::after{
+    top: -5px!important;
+  }
+}
+
+@media only screen and (max-device-width: 375px) and (min-device-height: 690px){//iphoneX
+
+}
+
+//欢迎页模块
+#welCome{
+  @hide();
+  .div(100%,100%);
+  overflow: hidden;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 5;
+
+  &>.tabs{
+    .div(200%,100%);
+    position: absolute;
+
+    &>div{
+      .div(50%,100%);
+      .backimg();
+      float: left;
+    }
+
+    .wel1{
+      //@hide();
+      background-color: #0079E2;
+      .bg{
+        .div(100%,80%);
+        background-image: url("../img/Liu/welcome1_bg.png");
+        .backimg();
+        padding-top: 10vh;
+
+        .txt{
+          .div(100%,30vh);
+
+          .tittle{
+            .div(3.56rem,1.12rem);
+            background-image: url("../img/Liu/welcom1_logo.png");
+            .backimg();
+            margin: 0 auto;
+            text-align: center;
+            .fonts(0.6rem,#0054E0,600,Adobe Heiti Std R);
+            line-height: 1rem;
+            letter-spacing: 2px;
+          }
+
+          div:last-child{
+            .div(auto,auto);
+            margin: 0 auto;
+            text-align: center;
+            .fonts(0.6rem,white,normal,Adobe Heiti Std R);
+
+            div{
+              .div(40%,1px);
+              margin: 0.1rem auto -0.15rem;
+              background-color: white;
+            }
+            span:first-child{
+              line-height: 0.87rem;
+            }
+            span:last-child{
+              font-size: 0.33rem;
+              line-height: 0.48rem;
+            }
+          }
+        }
+        .img{
+          .div(7.5rem,5rem);
+          background-image: url("../img/Liu/welcome1_img.png");
+          .backimg();
+          //background-color: white;
+          margin: 0 auto;
+        }
+      }
+
+    }
+    .wel2{
+      background-image: url("../img/Liu/welcome2_bg.png");
+
+      .bg{
+        .div(100%,80%);
+        padding-top: 10vh;
+
+        .txt{
+          .div(100%,30vh);
+          .fonts(0.72rem,white,normal,Adobe Heiti Std R);
+          text-align: center;
+
+          .tittle{
+            span{
+              font-weight: lighter;
+              color: rgba(255,255,255,0.5);
+            }
+          }
+          &>div:last-child{
+            &>span:first-child{
+              .fonts(0.3rem,white,normal,Adobe Heiti Std R);
+              line-height: 0.56rem;
+            }
+
+            &>span:last-child{
+              .fonts(0.58rem,white,normal,Adobe Heiti Std R);
+              line-height: 0.56rem;
+              &>span:first-child{
+                .fonts(0.84rem,#FFC513,normal,Adobe Heiti Std R)
+              }
+            }
+
+          }
+        }
+        .img{
+          .div(5rem,5rem);
+          background-image: url("../img/Liu/welcome2_img.png");
+          .backimg();
+          margin: 0 auto;
+        }
+      }
+    }
+
+    &.left{
+      animation: tabsleft 0.5s;
+      animation-fill-mode: forwards;
+      -webkit-animation:tabsleft 0.5s;
+      -webkit-animation-fill-mode: forwards;
+
+      //transition: -webkit-transform .5s ease;
+      //-webkit-transform: translate3d(-50%, 0, 0);
+    }
+    &.right{
+      animation: tabsright 0.5s;
+      animation-fill-mode: forwards;
+      -webkit-animation:tabsright 0.5s;
+      -webkit-animation-fill-mode: forwards;
+
+      //transition: -webkit-transform .5s ease;
+      //-webkit-transform: translate3d(0, 0, 0);
+    }
+    @keyframes tabsleft{
+      //0%{position: absolute;left: 0}
+      //100%{position: absolute;left: -100%}
+
+      0%{
+        transform:translate3d(0, 0, 0);
+        -webkit-transform:translate3d(0, 0, 0);
+      }
+      100%{
+        transform:translate3d(-100vw, 0, 0);
+        -webkit-transform:translate3d(-100vw, 0, 0);
+      }
+    }
+    @-webkit-keyframes tabsleft{
+      //0%{position: absolute;left: 0}
+      //100%{position: absolute;left: -100%}
+
+      0%{
+        transform:translate3d(0, 0, 0);
+        -webkit-transform:translate3d(0, 0, 0);
+      }
+      100%{
+        transform:translate3d(-100vw, 0, 0);
+        -webkit-transform:translate3d(-100vw, 0, 0);
+      }
+    }
+    @keyframes tabsright{
+      //0%{position: absolute;left: -100%}
+      //100%{position: absolute;left: 0}
+
+      0%{
+        transform:translate3d(-100vw, 0, 0);
+        -webkit-transform:translate3d(-100vw, 0, 0);
+      }
+      100%{
+        transform:translate3d(0, 0, 0);
+        -webkit-transform:translate3d(0, 0, 0);
+      }
+
+    }
+    @-webkit-keyframes tabsright{
+      //0%{position: absolute;left: -100%}
+      //100%{position: absolute;left: 0}
+
+      0%{
+        transform:translate3d(-100vw, 0, 0);
+        -webkit-transform:translate3d(-100vw, 0, 0);
+      }
+      100%{
+        transform:translate3d(0, 0, 0);
+        -webkit-transform:translate3d(0, 0, 0);
+      }
+
+    }
+  }
+
+  &>.dan{
+    opacity: 1;
+    position: fixed;
+    bottom: 10vh;
+    .div(100%,5vh);
+
+    &>div{
+      position: relative;
+      .div(2rem,5vh);
+      margin: 0 auto;
+
+      .dt{
+        .div(0.5rem,1vh);
+        margin: 0 auto;
+        position: relative;
+        top: 3vh;
+        z-index: 2;
+
+        div{
+          .div(0.3rem,0.1rem);
+          float: left;
+          background-color: white;
+          border-radius: 0.5vh;
+        }
+        div:last-child{
+          .div(0.1rem,0.1rem);
+          float: right;
+        }
+      }
+      .dgo{
+        @hide();
+        .div(100%,100%);
+        position: absolute;
+        border-radius: 2.5vh;
+        border: 2px solid white;
+        .fonts(0.3rem,white,normal,Adobe Heiti Std R);
+        text-align: center;
+        line-height: 5vh;
+      }
+    }
+
+  }
+
+  .shanxian{
+    animation: shan 1.5s infinite;
+    -webkit-animation:shan 1.5s infinite;
+  }
+  @keyframes shan{
+    10%{opacity: 1}
+    50%{opacity: 0.1}
+    90%{opacity: 1}
+  }
+  @-webkit-keyframes shan{
+    10%{opacity: 1}
+    50%{opacity: 0.1}
+    90%{opacity: 1}
+  }
+
+}
+
+#daohang{
+  .div(100%,4vh);
+  background-color: rgba(0,0,0,0.1);
+}
+
+/***************首页模块***************/
+//引用
+//footer模块
+#personal-footer {
+  width: 100%;
+  height: 1.1rem;
+  position: fixed;
+  background-color: #fff;
+  bottom: 0;
+  left: 0;
+  padding: .15rem .3rem 0 .3rem;
+  box-shadow:0 0 6px rgba(0,0,0,0.16);
+  .content {
+    width: 100%;
+    height: 100%;
+    .menu-btn {
+      width: 20%;
+      height: 100%;
+      color: powderblue;
+      text-align: center;
+      padding: 0;
+      img {
+        height: .4rem;
+      }
+      p {
+        font-size: .28rem;
+        color: #898989;
+        line-height: .45rem;
+        margin-bottom: 0!important;
+      }
+    }
+    .menu-btn.active {
+      p {
+        color: #E74A45;
+      }
+    }
+  }
+}
+
+
+html[data-page='index']{
+  //首页头部nav模块
+  #nav{
+    background-color: white;
+    .div(100%,8vh);
+
+    .city{
+      float: left;
+      .div(auto,100%);
+
+      div{
+        float: left;
+        .div(8vh,8vh);
+        background-image: url("../img/Liu/GPS.png");
+        .backimg(35%,50%);
+      }
+      p{
+        .fonts(0.3rem,#898989,400,Segoe UI);
+        float: left;
+        height: 8vh;
+        line-height: 8vh;
+        margin: 0;
+      }
+    }
+
+    a{
+      display: block;
+      .div(8vh,100%);
+      float: right;
+
+
+      div{
+        .div(8vh,100%);
+        .backimg(45%,50%);
+        float: right;
+      }
+
+      .per{
+        background-image: url("../img/Liu/account.png");
+      }
+      .customer{
+        background-image: url("../img/Liu/customer.png");
+      }
+
+
+    }
+  }
+  //首页主体模块
+  .body{
+    .div(100%,82vh);
+    overflow-x: hidden;
+    overflow-y: scroll;
+    &::-webkit-scrollbar {display:none}
+
+    //banner
+    #banner{
+      position: relative;
+      .div(100%,3.2rem);
+      background-color: rgba(245,245,245);
+
+      &>div{
+        position: absolute;
+        left: 0;
+        top: 0;
+        .div(600vw,100%);
+
+        div{
+          .div(100vw,100%);
+          float: left;
+          .backimg();
+
+          //opacity: 0.5;
+          //text-align: center;
+          //line-height: 3.2rem;
+          //.fonts(2rem,white,400);
+        }
+        //.banner1{background-color:red}
+        //.banner2{background-color:blue}
+        //.banner3{background-color:gold}
+        //.banner4{background-color:gray}
+        //.banner5{background-color:black}
+        //.banner6{background-color:red}
+      }
+    }
+
+    //用车信息
+    #useInfo{
+      .div(100%,1.34rem);
+      background-color: rgba(245,245,245);
+      padding-bottom: 0.05rem;
+
+      &>div{
+        .div(49.5%,100%);
+        float: left;
+        padding: 0.1rem 2% 0.1rem;
+        background-color: white;
+
+        &:last-child{float: right}
+        &>.img{
+          .div(30%,100%);
+          .backimg(60%,60%);
+          float: left;
+        }
+        &.car>.img{
+          background-image: url("../img/Liu/car.png");
+        }
+        &.money>.img{
+          background-image: url("../img/Liu/money.png");
+          .backimg(55%,55%);
+        }
+
+        &>div:last-child{
+          float: right;
+          .div(66%,100%);
+
+          .title{
+            .div(100%,60%);
+            .fonts(0.28rem,#000000,600,Segoe UI);
+            line-height: 0.55rem;
+          }
+          .txt{
+            .div(100%,40%);
+            .fonts(0.22rem,#898989,400,Segoe UI);
+          }
+
+        }
+      }
+    }
+
+    //1大4小模块
+    #SY_mukuai1{
+      .div(100%,3.76rem);
+      background-color: white;
+      border-bottom: 0.05rem solid rgba(245,245,245);
+      padding: 0.1rem 2%;
+
+      &>div,a{
+        display: block;
+        .div(50%,100%);
+        float: left;
+      }
+      .YiDa{
+        .div(49%,100%);
+        background-image: url("../img/Liu/SY_1da.png");
+        .backimg(100%,101.5%);
+        padding-top: 1.11rem;
+
+        .title{
+          margin: 0 auto;
+          .div(80%,0.5rem);
+          background-color: rgba(220,123,141,1);
+          .fonts(0.32rem,white,400);
+          border-radius: 4px;
+          text-align: center;
+          line-height: 0.5rem;
+        }
+        .txt{
+          .fonts(0.24rem,white,400);
+          text-align: center;
+          margin: 0.2rem auto 0;
+        }
+      }
+      .SiXiao{
+        .div(50%,100%);
+        float: right;
+
+        &>div{
+          .div(100%,46%);
+          &:first-child{margin-bottom: 4%}
+
+          &>a{
+            display: block;
+            .div(46%,100%);
+            float: left;
+            border-radius: 5px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.16);
+            position: relative;
+            overflow: hidden;
+
+            &:first-child{margin-right: 4%}
+            &>div{
+              text-align: center;
+              &:nth-child(1){
+                position: absolute;
+                left: 0;
+                top: 0.1rem;
+                .div(60%,0.3rem);
+                background-image: url("../img/Liu/sixiao_tit.png");
+                .backimg();
+                .fonts(0.14rem,white,400);
+                line-height: 0.35rem;
+                text-align: center;
+              }
+              &:nth-child(2){
+                position: absolute;
+                right: 0;
+                top: 0;
+                .div(40%,40%);
+                background-image: url("../img/Liu/sixiao_jiaobiao.png");
+                .backimg();
+                .fonts(0.2rem,#FF8600,400);
+                &>span{
+                  display: block;
+                  .div(100%,100%);
+                  line-height: 1.4;
+                  text-align: center;
+                  transform: rotate(45deg);
+                }
+              }
+              &:nth-child(3){
+                margin-top: 0.45rem;
+                .fonts(0.3rem,#E8564C,400);
+                }
+              &:nth-child(4){
+                .fonts(0.2rem,#000000,400);
+                }
+              &:nth-child(5){
+                .fonts(0.18rem,#E8564C,400);
+                }
+            }
+
+
+          }
+        }
+      }
+    }
+
+    //2大模块
+    #SY_mukuai2{
+      .div(100%,2rem);
+      background-color: white;
+      margin-top: 0.1rem;
+      margin-bottom: 0.1rem;
+      padding: 0.1rem 0;
+
+      &>a{
+        display: block;
+        .div(46%,100%);
+        float: left;
+        position: relative;
+
+        &:first-child{
+          margin-right: 2%;
+          margin-left: 3%;
+          background:linear-gradient(360deg,rgba(235,221,191,1) 0%,rgba(243,239,231,1) 100%);
+          border-radius: 6px;
+          overflow: hidden;
+
+          .img{
+            margin: 0 auto;
+            .div(1.4rem,1.4rem);
+            background-image: url("../img/Liu/Quan.png");
+            .backimg();
+            position: relative;
+            bottom: 0.2rem;
+          }
+          .txt{
+            position: relative;
+            bottom: 0.5rem;
+            text-align: center;
+            .fonts(0.15rem,#B36417,400);
+            &>div:first-child{
+              .fonts(0.3rem,#B36417,400);
+            }
+          }
+
+        }
+        &:last-child{
+          background-image: url("../img/Liu/HaoYou.png");
+          background-size: cover;
+          border-radius: 6px;
+
+          &>div{
+            float: right;
+            margin-right: 0.3rem;
+            .fonts(0.2rem,white,400);
+            text-align: center;
+            position: relative;
+            top: 0.7rem;
+          }
+        }
+      }
+    }
+
+  }
+}
+
+
+/***************登录/注册模块***************/
+html[data-page='login']{
+  //logo banner
+  #logoBanner{
+    .div(100%,3.81rem);
+    background:linear-gradient(30deg,rgba(220,21,16,1) 0%,rgba(220,21,16,1) 1%,rgba(248,82,85,1) 96%,rgba(248,82,85,1) 100%);
+
+    .bgImg{
+      .div(100%,100%);
+      padding-top: 0.3rem;
+      background-image: url("../img/Liu/login_logo.png");
+      .backimg();
+
+      .logo{
+        .div(100%,2.51rem);
+        //.fonts(0.5rem,white,400,Segoe UI);
+        //text-align: center;
+        //line-height: 2.51rem;
+        background-image: url("../img/LOGO.png");
+        .backimg(60%,180%);
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+      .tabs{
+        .div(100%,1rem);
+
+        &>div{
+          .div(50%,100%);
+          float: left;
+          .fonts(0.28rem,#FCA294,400,Microsoft YaHei);
+          text-align: center;
+          line-height: 1rem;
+
+          &.act{
+            color: white;
+            position: relative;
+
+            &::after{
+              content: '';
+              border-left: 5px solid transparent;
+              border-right: 5px solid transparent;
+              border-bottom: 5px solid white;
+              position: absolute;
+              bottom: 0;
+              left: 47%;
+            }
+          }
+        }
+
+      }
+
+    }
+
+  }
+  //Tabs
+  #Tab{
+    .div(100%,64vh);
+
+    &>div{
+      .div(100%,100%);
+      display: none;
+      padding-top: 0.2rem;
+
+      &>div{
+        .div(100%,1rem);
+
+
+        &.txt{display: none}
+        &.txt.act {
+          display: block;
+          padding-right: 5%;
+          background-color: white;
+          margin-bottom: 2px;
+
+          &>.img{
+            .div(10%,100%);
+            .backimg(0.25rem,0.28rem);
+            background-position: 80% 50%;
+            float: left;
+
+            &.user{
+              background-image: url("../img/Liu/icon_account.png");
+            }
+            &.pass{
+              background-image: url("../img/Liu/icon_password.png");
+            }
+            &.phone{
+              .backimg(0.25rem,0.33rem);
+              background-image: url("../img/Liu/icon_phone.png");
+            }
+            &.message{
+              background-size: 0.33rem 0.25rem;
+              background-image: url("../img/Liu/icon_message.png");
+            }
+          }
+          &>input{
+            float: left;
+            .div(90%,100%);
+            border: none;
+            .fonts(0.28rem,rgba(0,0,0,0.5),400);
+            margin: 0;
+
+            &::-webkit-input-placeholder {
+              .fonts(0.28rem,#B2B2B2,400);
+            }
+
+            &.message{
+              .div(60%,100%)
+            }
+          }
+          &>.button{
+            .div(30%,100%);
+            float: right;
+            text-align: right;
+            line-height: 1rem;
+            &>a{
+              .fonts(0.28rem,#FF4D4D,400);
+              text-decoration: underline;
+            }
+          }
+          &>.radio{
+            .div(45%,100%);
+            padding-left: 15px;
+            float: left;
+            .fonts(0.26rem,#666666,400);
+            line-height: 1rem;
+            position: relative;
+            right: 25px;
+
+            &>input[type="radio"]{
+              width: 25px;
+              height: 25px;
+              opacity: 0;
+            }
+            &>input[type="radio"] + label::after {
+              display: inline-block;
+              width: 20px;
+              height: 20px;
+              border-radius: 50%;
+              margin-left: 10px;
+              vertical-align: text-bottom;
+              border: 1px solid rgba(238,238,238,1);
+              background-color: rgba(238,238,238,1);
+              -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+              content: "";
+              position: relative;
+              top: 2.5px;
+            }
+            &>input[type="radio"]:checked +  label::after {
+              background:linear-gradient(30deg,rgba(183, 123, 249, 1) 0%,rgba(232, 86, 76, 1) 20%,rgba(252, 162, 148, 1) 90%);
+              background-clip: content-box;
+              border-color: rgba(238,238,238,1);
+              border-width: 5px;
+            }
+          }
+        }
+
+        &.yanzheng{
+          padding: 0.2rem;
+          &>div{
+            .div(40%,100%);
+            float: left;
+            &:last-child{
+              .div(60%,100%);
+            }
+
+            &>a{
+              display: none;
+              .fonts(0.28rem,#FF4D4D,400);
+              text-decoration: underline;
+
+              &.act{
+                display: block;
+              }
+            }
+
+            &:last-child{
+              .fonts(0.26rem,#666666,400);
+              text-align: right;
+
+              &>div{float: right}
+            }
+          }
+        }
+        &.forget{
+          .div(95%,auto);
+          &>div{
+            &>a{
+              text-align: right;
+              display: none;
+              .fonts(0.28rem,#FF4D4D,400);
+              text-decoration: underline;
+
+              &.act{
+                display: block;
+              }
+            }
+
+          }
+        }
+
+        &#loginGo,&#registerGo{
+          .div(90%,1rem);
+          margin: 2vh auto;
+          background-color: rgba(255,77,77,1);
+          .fonts(0.35rem,white,400);
+          text-align: center;
+          line-height: 1rem;
+          border-radius: 5px;
+        }
+        &.registerTxt{
+          height: 0.5rem;
+          .fonts(0.26rem,#E22927,400);
+          text-align: center;
+          line-height: 0.5rem;
+        }
+      }
+
+
+
+
+      &.act{
+        display: block;
+      }
+    }
+  }
+}
+
+
+/***************充值模块***************/
+/***模块一***/
+html[data-page='accountRecharge1']{
+  background-color: white;
+
+  #nav{
+    .div(100%,8vh);
+    position: relative;
+
+    //#back{
+    //  .div(10%,100%);
+    //  position: absolute;
+    //  left: 0;
+    //  bottom: 0;
+    //  background-image: url("../img/Liu/back2.png");
+    //  .backimg(2vh,3vh);
+    //}
+    a>div{
+      .div(10%,8vh);
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-image: url("../img/Liu/back2.png");
+      .backimg(0.2rem,0.3rem);
+    }
+
+    &>div:last-child{
+      .fonts(0.36rem,#2B2B2B,400);
+      text-align: center;
+      line-height: 8vh;
+    }
+  }
+
+  .body{
+    .div(100%,82%);
+    overflow-y: scroll;
+    &::-webkit-scrollbar {display:none}
+
+    #prepaid{
+      .div(75%,1.6rem);
+      background-image: url("../img/Liu/bg_prepaid.png");
+      .backimg(100%,115%);
+      padding: 0.5rem 10% 0.5rem 15%;
+
+      &>div{
+        .fonts(0.3rem,#FFFFFF,400);
+        &:first-child{
+          .div(98%,0.5rem);
+          padding-left: 2%;
+        }
+        &:last-child{
+          .div(100%,1.1rem);
+          .fonts(0.7rem,#FFFFFF,400);
+          line-height: 1.1rem;
+
+          &>span{
+            display: block;
+            .div(10%,100%);
+            float: left;
+          }
+          &>input{
+            display: block;
+            .div(88%,100%);
+            background-color: transparent;
+            border: none;
+            float: right;
+            .fonts(0.7rem,#FFFFFF,400);
+            line-height: 1.1rem;
+            &::placeholder{
+              .fonts(0.7rem,#FFFFFF,400);
+            }
+            &::-webkit-input-placeholder { /* WebKit browsers */
+              .fonts(0.7rem,#FFFFFF,400);
+            }
+            &:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+              .fonts(0.7rem,#FFFFFF,400);
+            }
+            &::-moz-placeholder { /* Mozilla Firefox 19+ */
+              .fonts(0.7rem,#FFFFFF,400);
+            }
+            &:-ms-input-placeholder { /* Internet Explorer 10+ */
+              .fonts(0.7rem,#FFFFFF,400);
+            }
+          }
+        }
+      }
+    }
+
+    #package{
+      .div(90%);
+      overflow: hidden;
+      margin: 0 auto;
+
+      &>div{
+        .div(27.8%,1.2rem);
+        margin: 0.1rem 2%;
+        border: 2px solid #DFDFDF;
+        float: left;
+        border-radius: 5px;
+        text-align: center;
+        .fonts(0.4rem,#000000,400);
+        padding-top: 0.2rem;
+
+        &>.interval{
+          font-size: 0.2rem!important;
+        }
+
+        &.active{
+          border: 2px solid rgba(232,86,76,0.7);
+          box-shadow:0 0 10px rgba(252,162,148,1);
+          .fonts(0.4rem,#E8564C,400);
+        }
+      }
+    }
+
+    #accounting{
+      .div(90%);
+      margin: 0.2rem auto 0;
+      text-align: center;
+      .fonts(0.3rem,#898989,400);
+
+      &>span{
+        color: #E8564C;
+      }
+    }
+
+    #bill{
+      .div(90%);
+      margin: 0.5rem auto 0;
+      padding: 0.2rem 5%;
+      border-top: 0.03rem solid rgba(245, 245, 245);
+      border-bottom: 0.03rem solid rgba(245, 245, 245);
+      overflow: hidden;
+
+      &>div:first-child{
+        .div(100%);
+        overflow: hidden;
+        &>div{
+          .div(30%);
+          float: left;
+          .fonts(0.3rem,#5D5D5D,400);
+
+
+
+          &:last-child{
+            .div(65%);
+            padding-right: 5%;
+            text-align: right;
+            position: relative;
+
+            &>span{
+              position: absolute;
+              right: 0;
+              top: -0.06rem;
+              transform: scaleX(0.5);
+              .fonts(0.5rem,#5D5D5D,400);
+            }
+          }
+        }
+      }
+
+      &>.bills{
+        display: none;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        .div(100%,100%);
+        background-color: rgba(0,0,0,0.5);
+        z-index: 2;
+        overflow: hidden;
+
+
+        &.act{display: block;}
+        &>.billsK{
+          .div(90%,50%);
+          position: fixed;
+          bottom: -60%;
+          left: 0;
+          background-color: white;
+          padding: 5% 5%;
+
+          &>div{
+            .div(100%);
+            &:first-child{
+              .div(100%,15%);
+              .fonts(0.4rem,#000000,400);
+
+              &>div{
+                .div(50%);
+                text-align: center;
+                float: left;
+              }
+            }
+            &:last-child{
+              .div(100%,75%);
+              .fonts(0.3rem,#000000,400);
+              overflow-y: scroll;
+              &::-webkit-scrollbar {display:none}
+
+              &>div{
+                .div(100%,10%);
+
+                &>div{
+                  .div(50%);
+                  text-align: center;
+                  float: left;
+                }
+              }
+            }
+          }
+        }
+
+        &>.back{
+          .div(100%,1rem);
+          position: fixed;
+          right: 0;
+          z-index: 3;
+          bottom: -51%;
+          text-align: center;
+          .fonts(0.35rem,#FFFFFF,400);
+          background-color: #FF4D4D;
+          line-height: 1rem;
+        }
+      }
+    }
+
+    #illustration{
+      margin-top: 0.5rem;
+      .div(100%,2rem);
+
+      &>div{
+        .div(50%,100%);
+        float: left;
+
+        &>div{
+          text-align: center;
+
+          &.img{
+            .div(100%,75%);
+            background-position: center;
+            background-repeat: no-repeat;
+          }
+
+          &:last-child{
+            .fonts(0.3rem,#5D5D5D,400);
+          }
+        }
+
+        &.img1>.img{
+          background-image: url("../img/Liu/jisudaozhang.png");
+          background-size: 30% 70%;
+        }
+        &.img2>.img{
+          background-image: url("../img/Liu/yinhangjianguan.png");
+          background-size: 25% 70%;
+        }
+
+      }
+    }
+
+  }
+
+  #nextGo{
+    .div(100%,10%);
+    position: fixed;
+    bottom: 0;
+    background-color: #F4F4F4;
+
+    &>div{
+      float: left;
+
+      &:first-child{
+        .div(70%,100%);
+
+        &>div{
+          float: left;
+          .div(45%,100%);
+
+          &:first-child{
+            padding-left: 5%;
+            &>div{
+              text-align: left;
+
+              &:first-child{
+                .div(100%,60%);
+                .fonts(0.3rem,#5D5D5D,400);
+                text-decoration: line-through;
+                line-height: 7vh;
+              }
+              &:last-child{
+                .div(100%,40%);
+                .fonts(0.2rem,#000000,400);
+              }
+            }
+          }
+          &:last-child{
+            .fonts(0.4rem,#E22927,900);
+            text-align: right;
+            line-height: 10vh;
+          }
+        }
+      }
+
+      &:last-child{
+        .div(30%,100%);
+        background-color: #FF4D4D;
+        .fonts(0.35rem,#FFFFFF,400);
+        text-align: center;
+        line-height: 10vh;
+      }
+    }
+  }
+}
+/***模块二***/
+html[data-page='accountRecharge2']{
+  background-color: white;
+
+  #nav{
+    .div(100%,8vh);
+    padding-bottom: 1%;
+    position: relative;
+
+   //#back{
+   //   .div(10%,100%);
+   //   position: absolute;
+   //   left: 0;
+   //   bottom: 0;
+   //  background-image: url("../img/Liu/back2.png");
+   //  .backimg(2vh,3vh);
+   // }
+    a>div{
+      .div(10%,8vh);
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-image: url("../img/Liu/back2.png");
+      .backimg(0.2rem,0.3rem);
+    }
+
+
+
+    &>div:last-child{
+      .fonts(0.36rem,#2B2B2B,400);
+      text-align: center;
+      line-height: 8vh;
+    }
+  }
+
+  .body{
+    .div(100%,91%);
+    overflow-y: scroll;
+    &::-webkit-scrollbar {display:none}
+
+    #money{
+      .div(70%,2rem);
+      margin: 0 auto 0.5rem;
+      background:linear-gradient(132deg,rgba(183,123,249,1) 0%,rgba(232,86,76,1) 0%,rgba(252,162,148,1) 100%);
+      box-shadow:0 6px 21px rgba(85,120,228,0.36);
+      -webkit-border-radius: 0.1rem;
+      -moz-border-radius: 0.1rem;
+      border-radius: 0.1rem;
+      padding: 0.2rem 10%;
+
+      &>div{
+        text-align: center;
+        &:first-child{
+          .fonts(0.3rem,white,400);
+          .div(100%,0.8rem);
+          line-height: 0.8rem;
+        }
+        &:last-child{
+          .fonts(0.8rem,white,bold);
+          .div(100%,1.2rem);
+          line-height: 1.2rem;
+        }
+      }
+    }
+
+    #bill{
+      .div(90%);
+      margin: 0.2rem auto 0;
+      overflow: hidden;
+
+      &>div:first-child{
+        .div(100%);
+        &>div{
+          .div(30%);
+          float: left;
+          .fonts(0.3rem,#5D5D5D,400);
+
+
+
+          &:last-child{
+            .div(65%);
+            padding-right: 5%;
+            text-align: right;
+            position: relative;
+
+            &>span{
+              position: absolute;
+              right: 0;
+              top: -0.06rem;
+              transform: scaleX(0.5);
+              .fonts(0.5rem,#5D5D5D,400);
+            }
+          }
+        }
+      }
+
+      &>.bills{
+        display: none;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        .div(100%,100%);
+        background-color: rgba(0,0,0,0.5);
+        z-index: 2;
+        overflow: hidden;
+
+        &.act{display: block;}
+        &>.billsK{
+          .div(90%,50%);
+          position: fixed;
+          bottom: -60%;
+          left: 0;
+          background-color: white;
+          padding: 5% 5%;
+
+          &>div{
+            .div(100%);
+            &:first-child{
+              .div(100%,15%);
+              .fonts(0.4rem,#000000,400);
+
+              &>div{
+                .div(50%);
+                text-align: center;
+                float: left;
+              }
+            }
+            &:last-child{
+              .div(100%,75%);
+              .fonts(0.3rem,#000000,400);
+              overflow-y: scroll;
+              &::-webkit-scrollbar {display:none}
+
+              &>div{
+                .div(100%,10%);
+
+                &>div{
+                  .div(50%);
+                  text-align: center;
+                  float: left;
+                }
+              }
+            }
+          }
+        }
+
+        &>.back{
+          .div(100%,1rem);
+          position: fixed;
+          right: 0;
+          z-index: 3;
+          bottom: -51%;
+          text-align: center;
+          .fonts(0.35rem,#FFFFFF,400);
+          background-color: #FF4D4D;
+          line-height: 1rem;
+        }
+      }
+    }
+
+    #coupon{
+      .div(90%);
+      margin: 0.2rem auto 0;
+      overflow: hidden;
+
+      &>div:first-child{
+        .div(100%);
+        &>div{
+          .div(30%);
+          float: left;
+          .fonts(0.3rem,#5D5D5D,400);
+
+
+
+          &:last-child{
+            color: #E22927;
+            .div(65%);
+            padding-right: 5%;
+            text-align: right;
+            position: relative;
+
+            &>span{
+              position: absolute;
+              right: 0;
+              top: -0.06rem;
+              transform: scaleX(0.5);
+              .fonts(0.5rem,#E22927,400);
+            }
+          }
+        }
+      }
+
+      &>.bills{
+        display: none;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        .div(100%,100%);
+        background-color: rgba(0,0,0,0.5);
+        z-index: 2;
+        overflow: hidden;
+
+        &.act{display: block;}
+        &>.billsK{
+          .div(90%,50%);
+          position: fixed;
+          bottom: -60%;
+          left: 0;
+          background-color: white;
+          padding: 5% 5%;
+
+          &>div{
+            .div(100%);
+            &:first-child{
+              .div(100%,15%);
+              .fonts(0.4rem,#000000,400);
+
+              &>div{
+                .div(50%);
+                text-align: center;
+                float: left;
+              }
+            }
+            &:last-child{
+              .div(100%,75%);
+              .fonts(0.3rem,#000000,400);
+              overflow-y: scroll;
+              &::-webkit-scrollbar {display:none}
+
+              &>div{
+                .div(100%,10%);
+                margin-bottom: 0.2rem;
+
+                &>div{
+                  .div(50%);
+                  text-align: center;
+                  float: left;
+                }
+              }
+            }
+          }
+        }
+
+        &>.back{
+          .div(100%,1rem);
+          position: fixed;
+          right: 0;
+          z-index: 3;
+          bottom: -51%;
+          text-align: center;
+          .fonts(0.35rem,#FFFFFF,400);
+          background-color: #FF4D4D;
+          line-height: 1rem;
+        }
+      }
+    }
+
+    #paymentMethod{
+      .div(90%);
+      margin: 0.2rem auto 0;
+
+      &>div{
+
+        &:first-child{
+          .fonts(0.3rem,#333333,400);
+        }
+        &:last-child{
+          .div(100%);
+          padding-top: 0.2rem;
+
+          &>div{
+            .div(100%,1rem);
+            border-bottom: 1px solid #EEEEEE;
+
+            &>div{
+              .div(68%,100%);
+              float: left;
+              line-height: 1rem;
+              .fonts(0.24rem,#333333,400);
+              padding-left: 2%;
+
+
+              &:first-child,&:last-child{.div(15%,100%);padding-left: 0}
+              &:first-child{
+                .backimg(70%,70%);
+
+              }
+
+              &:last-child{
+                position: relative;
+                &>input[type="radio"]{
+                  position: absolute;
+                  right: 0.1rem;
+                  top: 0.25rem;
+                  z-index: 1;
+                  width: 0.5rem;
+                  height: 0.5rem;
+                  opacity: 0;
+                }
+                &>input[type="radio"] + label::after {
+                  display: inline-block;
+                  width: 0.4rem;
+                  height: 0.4rem;
+                  border-radius: 50%;
+                  margin-left: 10px;
+                  vertical-align: text-bottom;
+                  border: 1px solid rgba(238,238,238,1);
+                  background-color: rgba(238,238,238,1);
+                  -webkit-box-sizing: border-box;
+                  box-sizing: border-box;
+                  content: "";
+                  position: absolute;
+                  right: 0.1rem;
+                  top: 0.3rem;
+                  z-index: 1;
+                }
+                &>input[type="radio"]:checked +  label::after {
+                  background:linear-gradient(30deg,rgba(183, 123, 249, 1) 0%,rgba(232, 86, 76, 1) 20%,rgba(252, 162, 148, 1) 90%);
+                  background-clip: content-box;
+                  border-color: rgba(238,238,238,1);
+                  border-width: 0.1rem;
+                }
+              }
+            }
+
+            &.Alipay>div:first-child{
+              background-image: url("../img/Liu/AlipayLogo.png");
+            }
+            &.WeChat>div:first-child{
+              background-image: url("../img/Liu/WeChatLogo.png");
+              background-size: 65% 60%;
+            }
+          }
+        }
+
+        &>p{
+          .div(100%);
+          text-align: center;
+          .fonts(0.24rem,#333333,400);
+          margin-top: 0.2rem;
+
+          &>a{
+            .fonts(0.24rem,#E22927,400);
+            text-decoration: underline;
+          }
+        }
+
+      }
+    }
+
+    #rechargeGo{
+      .div(80%,0.9rem);
+      margin: 1rem auto 1rem;
+      background:linear-gradient(180deg,rgba(232,86,76,1) 0%,rgba(252,162,148,1) 100%);
+      box-shadow:0 6px 21px rgba(252,162,148,1);
+      .fonts(0.28rem,#FFFFFF,400);
+      text-align: center;
+      line-height: 0.9rem;
+      border-radius:5px;
+    }
+
+  }
+}
+/***充值完成***/
+html[data-page='paymentCompleted']{
+  background-color: white;
+
+  #nav {
+    .div(100%,8vh);
+    background-color: #E74A45;
+    position: relative;
+    text-align: center;
+    .fonts(0.4rem,white,400);
+    line-height: 8vh;
+
+    a>div{
+      .div(10%,100%);
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-image: url("../img/Liu/back.png");
+      .backimg(0.2rem,0.3rem);
+    }
+  }
+
+  .body{
+    .div(100%,92vh);
+    overflow-y: scroll;
+    &::-webkit-scrollbar {display:none}
+
+    #payment{
+      padding-top: 1rem;
+      margin-bottom: 0.5rem;
+
+      &>div{
+        &:first-child{
+          .div(1.6rem,1.6rem);
+          margin: 0 auto;
+          background-image: url("../img/Liu/PaymentCompleted.png");
+          .backimg(100%,100%);
+          margin-bottom: 0.5rem;
+        }
+        &:last-child{
+          &>div{
+            text-align: center;
+            &:first-child{
+              .fonts(0.4rem,#89898B,400);
+              margin-bottom: 0.2rem;
+            }
+            &:last-child{
+              .fonts(0.52rem,#FE2408,400);
+            }
+          }
+        }
+      }
+    }
+
+    #information{
+
+      &>div{
+        .div(90%,0.6rem);
+        border-bottom: 2px solid #F4F4F4;
+        padding: 0.2rem 5%;
+
+        &>div{
+          .div(55%,100%);
+          float: left;
+          &:first-child{
+            width: 45%;
+            &>div{
+              float: left;
+              &:first-child{
+                .div(30%,100%);
+                background-image: url("../img/Liu/pay_account.png");
+                .backimg(50%,60%);
+              }
+              &:last-child{
+                .div(70%,100%);
+                line-height: 0.6rem;
+                .fonts(0.3rem,#3B4248,400);
+              }
+            }
+          }
+          &:last-child{
+            .fonts(0.3rem,#8C8D8F,400);
+            line-height: 0.6rem;
+            text-align: right;
+          }
+        }
+        &:last-child{
+          &>div:first-child>div:first-child{
+            background-image: url("../img/Liu/pay_time.png");
+            .backimg(50%,75%);
+          }
+        }
+      }
+    }
+
+    #homepage{
+      .div(80%,0.8rem);
+      border-radius: 1rem;
+      margin: 0.5rem auto 0;
+      background:linear-gradient(180deg,rgba(232,86,76,1) 0%,rgba(252,162,148,1) 100%);
+      box-shadow:0 6px 21px rgba(252,162,148,1);
+      .fonts(0.36rem,white,400);
+      line-height: 0.8rem;
+      text-align: center;
+    }
+
+  }
+
+
+}
+
+
+/***************客服模块***************/
+html[data-page='customerservice']{
+  background-color: white;
+
+  #nav{
+    .div(100%,8vh);
+    padding-top: 2.5vh;
+    background-color: #E74A45;
+    .fonts(0.3rem,#FFFFFF,400,Microsoft YaHei);
+    line-height: 8vh;
+
+    div{
+      float: left;
+    }
+    #back{
+      .div(5vh,8vh);
+      position: relative;
+      //margin-right: 2vh;
+      background-image: url("../img/Liu/back.png");
+      .backimg(0.2rem,0.3rem);
+    }
+    .title{
+      .div(30%,100%);
+    }
+    .artificial{
+      .div(30%,100%);
+      float: right;
+      margin-right: 2vh;
+      text-align: right;
+    }
+
+  }
+  #chatBox{
+    .div(92%,80vh);
+    padding: 1.5vh 4% 0.5vh;
+    overflow-y: scroll;
+    &::-webkit-scrollbar {display:none}
+
+    &>div:not(.historical){
+      .div(100%);
+      overflow: hidden;
+      margin-bottom: 0.2rem;
+
+      div{
+        .div(0.7rem,0.7rem);
+        background-size: 100% 100%;
+        background-position: center;
+      }
+      &>p{
+        .fonts(0.3rem,#000000,400);
+        .div(auto);
+        margin-top: 0.2rem;
+        max-width: 75%;
+        padding: 0.1rem 0.2rem;
+        position: relative;
+
+        span{
+          overflow: hidden;
+          word-wrap: break-word; word-break: normal;
+        }
+
+      }
+      &.customer.auto{
+        span{
+          color: #E8564C;
+        }
+      }
+    }
+    .customer{
+
+      div{
+        float: left;
+        background-image: url("../img/Liu/customerT.png");
+      }
+      &>p{
+        float: left;
+        margin-left: 5%;
+        background-color: #E6E7EB;
+
+        &:before{
+          content: '';
+          display: block;
+          width: 0;
+          height: 0;
+          border: 0.2rem solid transparent;
+          border-right: 0.2rem solid #E6E7EB;
+          border-top: 0.2rem solid #E6E7EB;
+          position: absolute;
+          top: 0;
+          left: -0.2rem;
+          z-index: 2;
+        }
+      }
+    }
+    .user{
+      div{
+        float: right;
+        background-image: url("../img/Liu/customerT.png");
+      }
+      &>p{
+        float: right;
+        margin-right: 5%;
+        background-color: #E8564C;
+        color: white!important;
+
+        &:after{
+          content: '';
+          display: block;
+          width: 0;
+          height: 0;
+          border: 0.2rem solid transparent;
+          border-left: 0.2rem solid #E8564C;
+          border-top: 0.2rem solid #E8564C;
+          position: absolute;
+          top: 0;
+          right: -0.2rem;
+          z-index: 2;
+        }
+      }
+    }
+    .historical{
+      .div(100%);
+      text-align: center;
+      .fonts(0.36rem,#13A0FF,400);
+    }
+
+  }
+  #inputBox{
+    .div(100%,0.8rem);
+    box-shadow:0px -3px 6px rgba(0,0,0,0.16);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    div{float: left}
+    .input{
+      .div(80%,100%);
+
+      input{
+        display: block;
+        .div(90%,90%);
+        margin-top: 0.04rem;
+        padding: 0 5%;
+        border: none;
+        .fonts(0.3rem,#5D5D5D,400);
+        caret-color:red;
+      }
+    }
+    .send{
+      .div(20%,100%);
+
+      span{
+        display: block;
+        .div(80%,0.6rem);
+        text-align: center;
+        background-color: #E8564C;
+        border-radius: 5px;
+        .fonts(0.3rem,white,400);
+        line-height: 0.65rem;
+        margin-top: 0.1rem;
+        float: right;
+        margin-right: 10%;
+      }
+    }
+
+  }
+}
+
+
+/***************活动模块***************/
+html[data-page='activity']{
+  #activity{
+    .div(100%,88vh);
+    padding: 4vh 3% 0;
+
+    a:not(:last-child){
+      display: block;
+      margin-bottom: 3vh;
+
+      &>div{
+        .div(100%,2rem);
+        .backimg();
+      }
+    }
+    a:last-child{
+      display: block;
+      margin-bottom: 3vh;
+      position: relative;
+
+      &>div{
+        .div(100%,2rem);
+        background-image: url("../img/Liu/kaifazhong.png");
+        background-size: 40% 70%;
+        background-position: 50% 0;
+        background-repeat: no-repeat;
+        .fonts(0.15rem,#999999,400);
+        text-align: center;
+        line-height: 3.5rem;
+      }
+    }
+  }
+}
+
+
+/***************安全模块***************/
+html[data-page='security']{
+  #nav {
+    .div(100%,12vh);
+    background-color: #E74A45;
+    position: relative;
+    text-align: center;
+    .fonts(0.4rem,white,400);
+    line-height: 8vh;
+    padding-top: 4vh;
+
+    #back{
+      .div(10%,8vh);
+      position: absolute;
+      top: 4vh;
+      left: 0;
+      background-image: url("../img/Liu/back.png");
+      .backimg(0.2rem,0.3rem);
+    }
+  }
+
+  .body{
+    .div(100%,81vh);
+    overflow-y: scroll;
+    &::-webkit-scrollbar {display:none}
+
+    .module{
+      .div(100%);
+      border-bottom: 0.1rem solid #E5E5E5;
+
+      &#module1{
+        &>div:first-child{
+          .div(100%);
+          overflow: hidden;
+          &>div{
+            .div(50%,4rem);
+            float: left;
+
+            &:first-child{
+              height: 2.7rem;
+              .fonts(0.3rem,#E8564C,400);
+              text-align: right;
+              padding-top: 1.3rem;
+
+              &>div{
+                margin-bottom: 0.2rem;
+                &>span{
+                  font-weight: bold;
+                  font-size: 0.4rem;
+                }
+                &:first-child{
+                  .fonts(0.3rem,#000000,900);
+                }
+                &:last-child{
+                  .fonts(0.22rem,#000000,400);
+                }
+              }
+            }
+            &:last-child{
+              background-image: url("../img/Liu/security_1.png");
+              .backimg(2rem,3rem);
+            }
+          }
+        }
+        &>div:last-child{
+          .div(100%);
+          overflow: hidden;
+          &>div{
+            .div(50%,4rem);
+            float: right;
+
+            &:first-child{
+              .div(40%,2.5rem);
+              .fonts(0.3rem,#E8564C,400);
+              text-align: left;
+              padding-top: 1.5rem;
+              padding-left: 10%;
+
+
+              &>div{
+                margin-bottom: 0.2rem;
+                &>span{
+                  font-weight: bold;
+                  font-size: 0.4rem;
+                }
+                &:first-child{
+                  .fonts(0.3rem,#000000,900);
+                }
+                &:last-child{
+                  .fonts(0.22rem,#000000,400);
+                }
+              }
+            }
+            &:last-child{
+              background-image: url("../img/Liu/security_2.png");
+              .backimg(3rem,2rem);
+            }
+          }
+        }
+      }
+      &#module2{
+        &>div{
+          margin: 0 auto;
+
+          &:nth-child(2){
+            &>div{
+              margin: 0 auto 0.5rem;
+              &:nth-child(1){
+                .div(55%,0.5rem);
+                margin: 0.5rem auto;
+                background-image: url("../img/Liu/security_4.png");
+                .backimg();
+              }
+              &:nth-child(2){
+                .div(50%);
+                .fonts(0.3rem,#000000,900);
+                overflow: hidden;
+
+                &>div{
+                  float: left;
+                  &:first-child{
+                    .div(0.5rem,0.5rem);
+                    background-image: url("../img/Liu/chongzhishijian.png");
+                    .backimg(90%,100%);
+                  }
+                  &:last-child{
+                    .div(85%,0.5rem);
+                    text-align: center;
+                    line-height: 0.5rem;
+                  }
+                }
+              }
+              &:nth-child(3),&:nth-child(4){
+                .div(55%);
+                text-align: center;
+                .fonts(0.4rem,#E8564C,900);
+                margin-bottom: 0.2rem;
+
+                &:nth-child(4){
+                  margin-bottom: 0.5rem;
+                }
+              }
+
+            }
+          }
+          &:first-child{
+            .div(70%,7.6rem);
+            background-image: url("../img/Liu/security_3.png");
+            .backimg();
+          }
+          &:last-child{
+            &>div{
+              margin-bottom: 0.5rem!important;
+
+              &:first-child{
+                .div(70%,1rem);
+                margin: 0 auto;
+                background-image: url("../img/Liu/zhongguojianshe.png");
+                .backimg();
+              }
+              &:last-child{
+                .fonts(0.24rem,#000000,900);
+                text-align: center;
+              }
+              &:nth-child(2){
+                .div(60%,0.55rem);
+                margin: 0 auto;
+                background-image: url("../img/Liu/txt_zhongguojianshe.png");
+                .backimg();
+              }
+            }
+          }
+        }
+      }
+      &#module3{
+        //.div(80%);
+        padding: 0.5rem 10%;
+        border-bottom: none;
+        margin-bottom: 0.2rem;
+        &>div{
+          margin: 0 auto 1rem;
+          .div(100%);
+          overflow: hidden;
+
+          &:nth-child(1){
+            &>div{
+              .div(50%,2rem);
+              float: left;
+
+              &:first-child{
+                background-image: url("../img/Liu/security_5.png");
+                .backimg(80%,100%);
+              }
+              &:last-child{
+                background-image: url("../img/Liu/security_6.png");
+                background-repeat: no-repeat;
+                background-position: bottom;
+                background-size: 75% 70%;
+              }
+            }
+          }
+          &:nth-child(2){
+            .div(90%);
+            padding: 0 5%;
+            &>div{
+              .div(33.33%);
+              float: left;
+              .fonts(0.5rem,#E8564C,900);
+              text-align: center;
+            }
+          }
+          &:nth-child(3){
+            .div(90%);
+            .fonts(0.4rem,#000000,900);
+            text-align: center;
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+
+
+}
+
+
+/***************邀请有礼模块***************/
+html[data-page='invitecourtesy']{
+  background-color: #F64841;
+
+  #banner{
+    .div(100%,6.7rem);
+    background-image: url("../img/Liu/Invite_ban1.png");
+    background-size: 100% 100%;
+    position: relative;
+    padding-top: 1.4rem;
+
+    &>div{
+      margin: 0 auto;
+      &:not(:last-child){
+        position: relative;
+        z-index: 2;
+      }
+      &:nth-child(1){
+        .div(90%,1rem);
+        background-image: url("../img/Liu/Invite_txt.png");
+        background-size: 100% 100%;
+        margin-bottom: 0.3rem;
+      }
+      &:nth-child(2){
+        .div(90%);
+        .fonts(0.24rem,white,400);
+        text-align: center;
+      }
+      &:nth-child(3){
+        .div(100%,5rem);
+        background-image: url("../img/Liu/Invite_img1.png");
+        background-size: 100% 100%;
+      }
+      &:nth-child(4){
+        position: absolute;
+        .div(100%,6.7rem);
+        background-image: url("../img/Liu/Invite_img3.png");
+        background-size: 200% 200%;
+        background-position: 50% 0;
+        z-index: 1;
+        left: 0;
+        bottom: 0;
+      }
+      &:last-child{
+        .div(10%,1rem);
+        background-image: url("../img/Liu/back.png");
+        .backimg(0.2rem,0.3rem);
+        position: absolute;
+        left: 0;
+        top: 0.4rem;
+      }
+    }
+  }
+  #shunxu{
+    .div(83%);
+    padding: 3% 5% 1%;
+    margin: 0 auto 0.2rem;
+    background-color: #FFFBF2;
+    border-radius: 20px;
+    overflow: hidden;
+
+    &>div{
+      float: left;
+
+      &.ban:not(:last-child){
+        .div(21%,1.8rem);
+
+        &>div{
+          &:first-child{
+            .div(100%,1rem);
+            .backimg(80%,100%);
+            margin-bottom: 0.2rem;
+          }
+          &:last-child{
+            .div(100%,0.6rem);
+            .fonts(0.2rem,#000000,400);
+            text-align: center;
+          }
+        }
+      }
+      &.ban:last-child{
+        .div(25%,1.6rem);
+
+        &>div{
+          .div(100%,1.8rem);
+          .backimg(100%,70%);
+        }
+      }
+      &.li{
+        .div(4%,1.5rem);
+        .fonts(0.2rem,#F64841,400);
+        text-align: center;
+        line-height: 1.5rem;
+      }
+    }
+  }
+  #rule{
+    .div(65%);
+    padding: 4% 14% 2%;
+    margin: 0 auto 0.2rem;
+    background-color: #FFFBF2;
+    border-radius: 10px;
+
+    &>div:not(:last-child){
+      text-align: center;
+      .fonts(0.24rem,rgba(0,0,0,1),bold,RTWSShangGoG0v1-Bold);
+      margin-bottom: 0.2rem;
+      background:linear-gradient(119deg,rgba(250,96,68,1) 0%, rgba(255,22,22,1) 100%);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+    }
+    &>div:last-child{
+      text-align: center;
+      .fonts(0.2rem,rgba(0,0,0,1),400,RTWSShangGoG0v1-Bold);
+    }
+  }
+  #ranking{
+    .div(95%);
+    margin: 0 auto;
+
+    &>div{
+      .div(100%);
+      position: relative;
+      &:first-child{
+        height: 1.2rem;
+        background-image: url("../img/Liu/Invite_img2.png");
+        background-size: 101.5% 100%;
+        .fonts(0.4rem,white,400,MFLangQian_Noncommercial-Regular);
+        text-align: center;
+        line-height: 0.8rem;
+        z-index: 2;
+      }
+      &:last-child{
+        .div(80%,7.8rem);
+        background-image: url("../img/Liu/Invite_img4.png");
+        background-size: 100% 100%;
+        margin: 0 auto;
+        top: -0.5rem;
+        right: 0.05rem;
+        padding: 0.4rem 5% 0.2rem;
+
+        &>div{
+          &:first-child{
+            .div(100%,0.5rem);
+            border-bottom: 1px solid #C5C5C5;
+
+            &>div{
+              float: left;
+              .div(20%,100%);
+              text-align: right;
+              .fonts(0.28rem,#FC9383,400);
+              &:nth-child(1){
+                width: 15%;
+                padding-left: 5%;
+                text-align: left;
+              }
+              &:nth-child(2){
+                text-align: center;
+                width: 34%;
+              }
+              &:nth-child(4){
+                width: 20%;
+                padding-left: 3%;
+              }
+            }
+          }
+          &:last-child{
+            .div(100%,7.3rem);
+            overflow-y: scroll;
+            &::-webkit-scrollbar {display:none}
+
+            &>div{
+              .div(100%,0.6rem);
+              &:first-child{
+                margin-top: 0.2rem;
+              }
+              margin-bottom: 0.2rem;
+              overflow: hidden;
+
+              &>div{
+                line-height: 0.6rem;
+                float: left;
+                .div(20%,100%);
+                text-align: right;
+                .fonts(0.28rem,#333333,bold);
+                &:nth-child(1),&:nth-child(2){
+                  text-align: center;
+                }
+                &:nth-child(2){
+                  width: 34%;
+                }
+                &:nth-child(4){
+                  width: 20%;
+                  padding-left: 3%;
+                  color: #F4463F;
+                }
+                &.Invite1{
+                  background-image: url("../img/Liu/Invite_01.png");
+                  .backimg(40%);
+                }
+                &.Invite2{
+                  background-image: url("../img/Liu/Invite_02.png");
+                  .backimg(40%);
+                }
+                &.Invite3{
+                  background-image: url("../img/Liu/Invite_03.png");
+                  .backimg(40%);
+                }
+
+
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+}
+
+
+/***************新人注册模块***************/
+html[data-page='rookie']{
+  background:linear-gradient(360deg,rgba(251,100,81,1) 0%,rgba(251,100,81,1) 100%);
+
+  #background{
+    .div(100%,95vh);
+    background-image: url("../img/Liu/rookie_background.png");
+    .backimg();
+    padding-top: 5vh;
+    //overflow: hidden;
+
+    &>section{
+      margin: 0 auto;
+    }
+    #title{
+      .div(90%,1.2rem);
+      background-image: url("../img/Liu/rookie_title.png");
+      .backimg();
+      margin-bottom: 0.1rem;
+    }
+    #txt{
+      .div(60%,0.8rem);
+      background: linear-gradient(360deg,rgba(254,227,148,1) 0%,rgba(255,242,187,1) 100%);
+      border-radius: 0.4rem;
+      .fonts(0.4rem,#FE6D5A,400);
+      text-align: center;
+      line-height: 0.8rem;
+    }
+    #img{
+      .div(90%,3.5rem);
+      background-image: url("../img/Liu/rookie_img.png");
+      background-size: 100% 160%;
+      background-position: 50% 100%;
+      background-repeat: no-repeat;
+      margin-top: -0.3rem;
+    }
+    #coupon{
+      .div(90%);
+      overflow: hidden;
+      margin-top: -0.6rem;
+      margin-bottom: 0.3rem;
+
+      &>div{
+        margin: 0 auto;
+
+        &:first-child{
+          .div(93%,6px);
+          background-color: #BF220C;
+          border: 10px solid #ED3017;
+          border-radius: 10px;
+        }
+        &:last-child{
+          .div(85.5%);
+          margin-top: -13px;
+          background-color: white;
+          box-shadow: inset 0 5px 10px rgba(248,215,215,1);
+          border-radius:0 0 10px 10px;
+          padding: 0.3rem 3%;
+
+          &>div{
+            &:first-child{
+              text-align: center;
+              .fonts(0.4rem,#FB6451,400);
+              margin-bottom: 0.3rem;
+            }
+            &:not(:first-child){
+              .div(100%,1.6rem);
+              background-image: url("../img/Liu/rookie_coupon.png");
+              .backimg();
+              margin-bottom: 0.2rem;
+
+              &>div{
+                height: 100%;
+                float: left;
+                text-align: center;
+                &:first-child{
+                  width: 40%;
+                  .fonts(0.5rem,#FB6451,400);
+                  line-height: 1.6rem;
+                }
+                &:last-child{
+                  .div(58%,1.3rem);
+                  padding-top: 0.3rem;
+
+                  &>div{
+                    margin: 0 auto;
+                    text-align: center;
+
+                    &:first-child{
+                      .div(55%,0.4rem);
+                      border: 1px solid rgba(255,255,255,1);
+                      border-radius: 0.2rem;
+                      .fonts(0.24rem,white,400);
+                      line-height: 0.4rem;
+                      margin-bottom: 0.2rem;
+                    }
+                    &:last-child{
+                      .fonts(0.3rem,white,400);
+                    }
+                  }
+                }
+
+              }
+            }
+          }
+        }
+      }
+    }
+    #button{
+      .div(85%,0.8rem);
+      background-color: white;
+      border-radius: 0.4rem;
+      .fonts(0.36rem,#FB6451,400);
+      text-align: center;
+      line-height: 0.8rem;
+      margin-bottom: 0.5rem;
+    }
+
+  }
+
+}
+
+
+
+
+//加载动画
+.sk-wave {
+  margin: 40px auto;
+  width: 50px;
+  height: 40px;
+  text-align: center;
+  font-size: 10px; }
+.sk-wave .sk-rect {
+  background-color: #333;
+  height: 100%;
+  width: 6px;
+  display: inline-block;
+  -webkit-animation: sk-waveStretchDelay 1.2s infinite ease-in-out;
+  animation: sk-waveStretchDelay 1.2s infinite ease-in-out; }
+.sk-wave .sk-rect1 {
+  -webkit-animation-delay: -1.2s;
+  animation-delay: -1.2s; }
+.sk-wave .sk-rect2 {
+  -webkit-animation-delay: -1.1s;
+  animation-delay: -1.1s; }
+.sk-wave .sk-rect3 {
+  -webkit-animation-delay: -1s;
+  animation-delay: -1s; }
+.sk-wave .sk-rect4 {
+  -webkit-animation-delay: -0.9s;
+  animation-delay: -0.9s; }
+.sk-wave .sk-rect5 {
+  -webkit-animation-delay: -0.8s;
+  animation-delay: -0.8s; }
+@-webkit-keyframes sk-waveStretchDelay {
+  0%, 40%, 100% {
+    -webkit-transform: scaleY(0.4);
+    transform: scaleY(0.4); }
+  20% {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1); } }
+@keyframes sk-waveStretchDelay {
+  0%, 40%, 100% {
+    -webkit-transform: scaleY(0.4);
+    transform: scaleY(0.4); }
+  20% {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1); } }
+
+
+//mui按钮
+.mui-switch-mini{
+  width: 42px!important;
+}
+.mui-switch{
+  height: 20px!important;
+}
+.mui-switch .mui-switch-handle{
+  .div(18px,18px)!important;
+  left: 0!important;
+}
+.mui-switch.mui-active{
+  border-color: #ECB452!important;
+  background-color: #ECB452!important;
+}
+
+

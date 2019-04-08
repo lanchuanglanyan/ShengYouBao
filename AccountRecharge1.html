@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" data-page="accountRecharge1">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0,viewport-fit=cover,user-scalable=no">
+    <title>账户充值</title>
+
+
+    <!--<link rel="stylesheet/less" type="text/css" href="css/Liu.less" />-->
+    <link rel="stylesheet" type="text/css" href="css/Liu.css" />
+    <script src="js/less.js" type="text/javascript"></script>
+
+    <!--设备适配-->
+    <script src="js/rem.js"></script>
+</head>
+<body>
+<div id="daohang"></div>
+<!--顶部nav-->
+<section id="nav">
+    <!--<div id="back"></div>-->
+    <a href="index.html"><div></div></a>
+    <div>加油卡充值</div>
+</section>
+<section class="body">
+    <!--充值金额-->
+    <section id="prepaid">
+        <div>充值金额</div>
+        <div><span>￥</span>
+            <input type="number" placeholder="00.00" class="prepaid">
+        </div>
+    </section>
+    <!--选择套餐-->
+    <section id="package">
+        <div class="active">
+            <span class="discount" data-discount="0.9">9折</span>
+            <br>
+            <span class="interval" data-interval="6">6个月套餐</span>
+        </div>
+        <div>
+            <span class="discount" data-discount="0.88">8.8折</span>
+            <br>
+            <span class="interval" data-interval="9">9个月套餐</span>
+        </div>
+        <div>
+            <span class="discount" data-discount="0.85">8.5折</span>
+            <br>
+            <span class="interval" data-interval="12">12个月套餐</span>
+        </div>
+        <div>
+            <span class="discount" data-discount="0.8">8折</span>
+            <br>
+            <span class="interval" data-interval="18">18个月套餐</span>
+        </div>
+        <div>
+            <span class="discount" data-discount="0.75">7.5折</span>
+            <br>
+            <span class="interval" data-interval="24">24个月套餐</span>
+        </div>
+    </section>
+    <!--计算价格-->
+    <section id="accounting">
+        充值总计<span class="yuanjia">0</span>元，折后价<span class="xianjia">0</span>元，省<span class="sheng">0</span>元
+    </section>
+    <!--到账明细-->
+    <section id="bill">
+        <div>
+            <div>到账明细</div>
+            <div class="bill">次月当日到账<span>></span></div>
+        </div>
+        <div class="bills">
+            <div class="back">取消</div>
+            <div class="billsK">
+                <div><div>到账时间</div><div>到账金额</div></div>
+                <div class="biLLs">
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--解说图-->
+    <section id="illustration">
+        <div class="img1">
+            <div class="img"></div>
+            <div>极速到账</div>
+        </div>
+        <div class="img2">
+            <div class="img"></div>
+            <div>资金银行监管</div>
+        </div>
+    </section>
+
+</section>
+<!--下一步-->
+<section id="nextGo">
+    <div>
+        <div>
+            <div>原价￥<span class="yuanjia">0</span></div>
+            <div>省<span class="sheng">0</span></div>
+        </div>
+        <div>￥<span class="xianjia">0</span></div>
+    </div>
+    <div class="nextGo">下一步</div>
+</section>
+
+<script src="js/jquery-2.2.3.min.js"></script>
+<script src="js/Liu_main.js"></script>
+<script>
+    document.addEventListener('plusready', function() {
+        var webview = plus.webview.currentWebview();
+        plus.key.addEventListener('backbutton', function() {
+            webview.canBack(function(e) {
+                if(e.canBack) {
+                    webview.back();
+                } else {
+                    webview.close(); //hide,quit
+                    //plus.runtime.quit();
+                }
+            })
+        });
+    });
+</script>
+</body>
+</html>

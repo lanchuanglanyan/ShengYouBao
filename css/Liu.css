@@ -1,0 +1,2813 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+div,
+input,
+textarea,
+span,
+a {
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+}
+div,
+input,
+textarea,
+span,
+a:focus {
+  text-decoration: none;
+}
+a:active,
+a:hover {
+  text-decoration: none;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  html[data-page='index'] #SY_mukuai2 > a:last-child > div {
+    font-size: 0.2rem !important;
+    color: white !important;
+    font-weight: 400 !important;
+    font-family: Arial !important;
+    top: 0.6rem !important;
+  }
+  html[data-page='index'] #SY_mukuai1 > .SiXiao > div > a > div:nth-child(1) {
+    width: 45% !important;
+    height: 0.3rem !important;
+    line-height: 0.3rem !important;
+  }
+  html[data-page='login'] #Tab > div > div.txt.act > .radio > input[type="radio"] + label::after {
+    top: -5px !important;
+  }
+}
+@media only screen and (max-device-width: 375px) and (min-device-height: 690px) {
+}
+#welCome {
+  display: none;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 5;
+}
+#welCome > .tabs {
+  width: 200%;
+  height: 100%;
+  position: absolute;
+}
+#welCome > .tabs > div {
+  width: 50%;
+  height: 100%;
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  float: left;
+}
+#welCome > .tabs .wel1 {
+  background-color: #0079E2;
+}
+#welCome > .tabs .wel1 .bg {
+  width: 100%;
+  height: 80%;
+  background-image: url("../img/Liu/welcome1_bg.png");
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-top: 10vh;
+}
+#welCome > .tabs .wel1 .bg .txt {
+  width: 100%;
+  height: 30vh;
+}
+#welCome > .tabs .wel1 .bg .txt .tittle {
+  width: 3.56rem;
+  height: 1.12rem;
+  background-image: url("../img/Liu/welcom1_logo.png");
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 0.6rem;
+  color: #0054E0;
+  font-weight: 600;
+  font-family: Adobe Heiti Std R;
+  line-height: 1rem;
+  letter-spacing: 2px;
+}
+#welCome > .tabs .wel1 .bg .txt div:last-child {
+  width: auto;
+  height: auto;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 0.6rem;
+  color: white;
+  font-weight: normal;
+  font-family: Adobe Heiti Std R;
+}
+#welCome > .tabs .wel1 .bg .txt div:last-child div {
+  width: 40%;
+  height: 1px;
+  margin: 0.1rem auto -0.15rem;
+  background-color: white;
+}
+#welCome > .tabs .wel1 .bg .txt div:last-child span:first-child {
+  line-height: 0.87rem;
+}
+#welCome > .tabs .wel1 .bg .txt div:last-child span:last-child {
+  font-size: 0.33rem;
+  line-height: 0.48rem;
+}
+#welCome > .tabs .wel1 .bg .img {
+  width: 7.5rem;
+  height: 5rem;
+  background-image: url("../img/Liu/welcome1_img.png");
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+}
+#welCome > .tabs .wel2 {
+  background-image: url("../img/Liu/welcome2_bg.png");
+}
+#welCome > .tabs .wel2 .bg {
+  width: 100%;
+  height: 80%;
+  padding-top: 10vh;
+}
+#welCome > .tabs .wel2 .bg .txt {
+  width: 100%;
+  height: 30vh;
+  font-size: 0.72rem;
+  color: white;
+  font-weight: normal;
+  font-family: Adobe Heiti Std R;
+  text-align: center;
+}
+#welCome > .tabs .wel2 .bg .txt .tittle span {
+  font-weight: lighter;
+  color: rgba(255, 255, 255, 0.5);
+}
+#welCome > .tabs .wel2 .bg .txt > div:last-child > span:first-child {
+  font-size: 0.3rem;
+  color: white;
+  font-weight: normal;
+  font-family: Adobe Heiti Std R;
+  line-height: 0.56rem;
+}
+#welCome > .tabs .wel2 .bg .txt > div:last-child > span:last-child {
+  font-size: 0.58rem;
+  color: white;
+  font-weight: normal;
+  font-family: Adobe Heiti Std R;
+  line-height: 0.56rem;
+}
+#welCome > .tabs .wel2 .bg .txt > div:last-child > span:last-child > span:first-child {
+  font-size: 0.84rem;
+  color: #FFC513;
+  font-weight: normal;
+  font-family: Adobe Heiti Std R;
+}
+#welCome > .tabs .wel2 .bg .img {
+  width: 5rem;
+  height: 5rem;
+  background-image: url("../img/Liu/welcome2_img.png");
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+}
+#welCome > .tabs.left {
+  animation: tabsleft 0.5s;
+  animation-fill-mode: forwards;
+  -webkit-animation: tabsleft 0.5s;
+  -webkit-animation-fill-mode: forwards;
+}
+#welCome > .tabs.right {
+  animation: tabsright 0.5s;
+  animation-fill-mode: forwards;
+  -webkit-animation: tabsright 0.5s;
+  -webkit-animation-fill-mode: forwards;
+}
+@keyframes tabsleft {
+  0% {
+    transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-100vw, 0, 0);
+    -webkit-transform: translate3d(-100vw, 0, 0);
+  }
+}
+@-webkit-keyframes tabsleft {
+  0% {
+    transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-100vw, 0, 0);
+    -webkit-transform: translate3d(-100vw, 0, 0);
+  }
+}
+@keyframes tabsright {
+  0% {
+    transform: translate3d(-100vw, 0, 0);
+    -webkit-transform: translate3d(-100vw, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+  }
+}
+@-webkit-keyframes tabsright {
+  0% {
+    transform: translate3d(-100vw, 0, 0);
+    -webkit-transform: translate3d(-100vw, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+  }
+}
+#welCome > .dan {
+  opacity: 1;
+  position: fixed;
+  bottom: 10vh;
+  width: 100%;
+  height: 5vh;
+}
+#welCome > .dan > div {
+  position: relative;
+  width: 2rem;
+  height: 5vh;
+  margin: 0 auto;
+}
+#welCome > .dan > div .dt {
+  width: 0.5rem;
+  height: 1vh;
+  margin: 0 auto;
+  position: relative;
+  top: 3vh;
+  z-index: 2;
+}
+#welCome > .dan > div .dt div {
+  width: 0.3rem;
+  height: 0.1rem;
+  float: left;
+  background-color: white;
+  border-radius: 0.5vh;
+}
+#welCome > .dan > div .dt div:last-child {
+  width: 0.1rem;
+  height: 0.1rem;
+  float: right;
+}
+#welCome > .dan > div .dgo {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: 2.5vh;
+  border: 2px solid white;
+  font-size: 0.3rem;
+  color: white;
+  font-weight: normal;
+  font-family: Adobe Heiti Std R;
+  text-align: center;
+  line-height: 5vh;
+}
+#welCome .shanxian {
+  animation: shan 1.5s infinite;
+  -webkit-animation: shan 1.5s infinite;
+}
+@keyframes shan {
+  10% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.1;
+  }
+  90% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes shan {
+  10% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.1;
+  }
+  90% {
+    opacity: 1;
+  }
+}
+#daohang {
+  width: 100%;
+  height: 4vh;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+/***************首页模块***************/
+#personal-footer {
+  width: 100%;
+  height: 1.1rem;
+  position: fixed;
+  background-color: #fff;
+  bottom: 0;
+  left: 0;
+  padding: 0.15rem 0.3rem 0 0.3rem;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.16);
+}
+#personal-footer .content {
+  width: 100%;
+  height: 100%;
+}
+#personal-footer .content .menu-btn {
+  width: 20%;
+  height: 100%;
+  color: powderblue;
+  text-align: center;
+  padding: 0;
+}
+#personal-footer .content .menu-btn img {
+  height: 0.4rem;
+}
+#personal-footer .content .menu-btn p {
+  font-size: 0.28rem;
+  color: #898989;
+  line-height: 0.45rem;
+  margin-bottom: 0!important;
+}
+#personal-footer .content .menu-btn.active p {
+  color: #E74A45;
+}
+html[data-page='index'] #nav {
+  background-color: white;
+  width: 100%;
+  height: 8vh;
+}
+html[data-page='index'] #nav .city {
+  float: left;
+  width: auto;
+  height: 100%;
+}
+html[data-page='index'] #nav .city div {
+  float: left;
+  width: 8vh;
+  height: 8vh;
+  background-image: url("../img/Liu/GPS.png");
+  background-size: 35% 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+html[data-page='index'] #nav .city p {
+  font-size: 0.3rem;
+  color: #898989;
+  font-weight: 400;
+  font-family: Segoe UI;
+  float: left;
+  height: 8vh;
+  line-height: 8vh;
+  margin: 0;
+}
+html[data-page='index'] #nav a {
+  display: block;
+  width: 8vh;
+  height: 100%;
+  float: right;
+}
+html[data-page='index'] #nav a div {
+  width: 8vh;
+  height: 100%;
+  background-size: 45% 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  float: right;
+}
+html[data-page='index'] #nav a .per {
+  background-image: url("../img/Liu/account.png");
+}
+html[data-page='index'] #nav a .customer {
+  background-image: url("../img/Liu/customer.png");
+}
+html[data-page='index'] .body {
+  width: 100%;
+  height: 82vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+html[data-page='index'] .body::-webkit-scrollbar {
+  display: none;
+}
+html[data-page='index'] .body #banner {
+  position: relative;
+  width: 100%;
+  height: 3.2rem;
+  background-color: rgba(245, 245, 245);
+}
+html[data-page='index'] .body #banner > div {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 600vw;
+  height: 100%;
+}
+html[data-page='index'] .body #banner > div div {
+  width: 100vw;
+  height: 100%;
+  float: left;
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+html[data-page='index'] .body #useInfo {
+  width: 100%;
+  height: 1.34rem;
+  background-color: rgba(245, 245, 245);
+  padding-bottom: 0.05rem;
+}
+html[data-page='index'] .body #useInfo > div {
+  width: 49.5%;
+  height: 100%;
+  float: left;
+  padding: 0.1rem 2% 0.1rem;
+  background-color: white;
+}
+html[data-page='index'] .body #useInfo > div:last-child {
+  float: right;
+}
+html[data-page='index'] .body #useInfo > div > .img {
+  width: 30%;
+  height: 100%;
+  background-size: 60% 60%;
+  background-position: center;
+  background-repeat: no-repeat;
+  float: left;
+}
+html[data-page='index'] .body #useInfo > div.car > .img {
+  background-image: url("../img/Liu/car.png");
+}
+html[data-page='index'] .body #useInfo > div.money > .img {
+  background-image: url("../img/Liu/money.png");
+  background-size: 55% 55%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+html[data-page='index'] .body #useInfo > div > div:last-child {
+  float: right;
+  width: 66%;
+  height: 100%;
+}
+html[data-page='index'] .body #useInfo > div > div:last-child .title {
+  width: 100%;
+  height: 60%;
+  font-size: 0.28rem;
+  color: #000000;
+  font-weight: 600;
+  font-family: Segoe UI;
+  line-height: 0.55rem;
+}
+html[data-page='index'] .body #useInfo > div > div:last-child .txt {
+  width: 100%;
+  height: 40%;
+  font-size: 0.22rem;
+  color: #898989;
+  font-weight: 400;
+  font-family: Segoe UI;
+}
+html[data-page='index'] .body #SY_mukuai1 {
+  width: 100%;
+  height: 3.76rem;
+  background-color: white;
+  border-bottom: 0.05rem solid rgba(245, 245, 245);
+  padding: 0.1rem 2%;
+}
+html[data-page='index'] .body #SY_mukuai1 > div,
+html[data-page='index'] .body #SY_mukuai1 a {
+  display: block;
+  width: 50%;
+  height: 100%;
+  float: left;
+}
+html[data-page='index'] .body #SY_mukuai1 .YiDa {
+  width: 49%;
+  height: 100%;
+  background-image: url("../img/Liu/SY_1da.png");
+  background-size: 100% 101.5%;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-top: 1.11rem;
+}
+html[data-page='index'] .body #SY_mukuai1 .YiDa .title {
+  margin: 0 auto;
+  width: 80%;
+  height: 0.5rem;
+  background-color: #dc7b8d;
+  font-size: 0.32rem;
+  color: white;
+  font-weight: 400;
+  font-family: Arial;
+  border-radius: 4px;
+  text-align: center;
+  line-height: 0.5rem;
+}
+html[data-page='index'] .body #SY_mukuai1 .YiDa .txt {
+  font-size: 0.24rem;
+  color: white;
+  font-weight: 400;
+  font-family: Arial;
+  text-align: center;
+  margin: 0.2rem auto 0;
+}
+html[data-page='index'] .body #SY_mukuai1 .SiXiao {
+  width: 50%;
+  height: 100%;
+  float: right;
+}
+html[data-page='index'] .body #SY_mukuai1 .SiXiao > div {
+  width: 100%;
+  height: 46%;
+}
+html[data-page='index'] .body #SY_mukuai1 .SiXiao > div:first-child {
+  margin-bottom: 4%;
+}
+html[data-page='index'] .body #SY_mukuai1 .SiXiao > div > a {
+  display: block;
+  width: 46%;
+  height: 100%;
+  float: left;
+  border-radius: 5px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.16);
+  position: relative;
+  overflow: hidden;
+}
+html[data-page='index'] .body #SY_mukuai1 .SiXiao > div > a:first-child {
+  margin-right: 4%;
+}
+html[data-page='index'] .body #SY_mukuai1 .SiXiao > div > a > div {
+  text-align: center;
+}
+html[data-page='index'] .body #SY_mukuai1 .SiXiao > div > a > div:nth-child(1) {
+  position: absolute;
+  left: 0;
+  top: 0.1rem;
+  width: 60%;
+  height: 0.3rem;
+  background-image: url("../img/Liu/sixiao_tit.png");
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-size: 0.14rem;
+  color: white;
+  font-weight: 400;
+  font-family: Arial;
+  line-height: 0.35rem;
+  text-align: center;
+}
+html[data-page='index'] .body #SY_mukuai1 .SiXiao > div > a > div:nth-child(2) {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 40%;
+  height: 40%;
+  background-image: url("../img/Liu/sixiao_jiaobiao.png");
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-size: 0.2rem;
+  color: #FF8600;
+  font-weight: 400;
+  font-family: Arial;
+}
+html[data-page='index'] .body #SY_mukuai1 .SiXiao > div > a > div:nth-child(2) > span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  line-height: 1.4;
+  text-align: center;
+  transform: rotate(45deg);
+}
+html[data-page='index'] .body #SY_mukuai1 .SiXiao > div > a > div:nth-child(3) {
+  margin-top: 0.45rem;
+  font-size: 0.3rem;
+  color: #E8564C;
+  font-weight: 400;
+  font-family: Arial;
+}
+html[data-page='index'] .body #SY_mukuai1 .SiXiao > div > a > div:nth-child(4) {
+  font-size: 0.2rem;
+  color: #000000;
+  font-weight: 400;
+  font-family: Arial;
+}
+html[data-page='index'] .body #SY_mukuai1 .SiXiao > div > a > div:nth-child(5) {
+  font-size: 0.18rem;
+  color: #E8564C;
+  font-weight: 400;
+  font-family: Arial;
+}
+html[data-page='index'] .body #SY_mukuai2 {
+  width: 100%;
+  height: 2rem;
+  background-color: white;
+  margin-top: 0.1rem;
+  margin-bottom: 0.1rem;
+  padding: 0.1rem 0;
+}
+html[data-page='index'] .body #SY_mukuai2 > a {
+  display: block;
+  width: 46%;
+  height: 100%;
+  float: left;
+  position: relative;
+}
+html[data-page='index'] .body #SY_mukuai2 > a:first-child {
+  margin-right: 2%;
+  margin-left: 3%;
+  background: linear-gradient(360deg, #ebddbf 0%, #f3efe7 100%);
+  border-radius: 6px;
+  overflow: hidden;
+}
+html[data-page='index'] .body #SY_mukuai2 > a:first-child .img {
+  margin: 0 auto;
+  width: 1.4rem;
+  height: 1.4rem;
+  background-image: url("../img/Liu/Quan.png");
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  bottom: 0.2rem;
+}
+html[data-page='index'] .body #SY_mukuai2 > a:first-child .txt {
+  position: relative;
+  bottom: 0.5rem;
+  text-align: center;
+  font-size: 0.15rem;
+  color: #B36417;
+  font-weight: 400;
+  font-family: Arial;
+}
+html[data-page='index'] .body #SY_mukuai2 > a:first-child .txt > div:first-child {
+  font-size: 0.3rem;
+  color: #B36417;
+  font-weight: 400;
+  font-family: Arial;
+}
+html[data-page='index'] .body #SY_mukuai2 > a:last-child {
+  background-image: url("../img/Liu/HaoYou.png");
+  background-size: cover;
+  border-radius: 6px;
+}
+html[data-page='index'] .body #SY_mukuai2 > a:last-child > div {
+  float: right;
+  margin-right: 0.3rem;
+  font-size: 0.2rem;
+  color: white;
+  font-weight: 400;
+  font-family: Arial;
+  text-align: center;
+  position: relative;
+  top: 0.7rem;
+}
+/***************登录/注册模块***************/
+html[data-page='login'] #logoBanner {
+  width: 100%;
+  height: 3.81rem;
+  background: linear-gradient(30deg, #dc1510 0%, #dc1510 1%, #f85255 96%, #f85255 100%);
+}
+html[data-page='login'] #logoBanner .bgImg {
+  width: 100%;
+  height: 100%;
+  padding-top: 0.3rem;
+  background-image: url("../img/Liu/login_logo.png");
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+html[data-page='login'] #logoBanner .bgImg .logo {
+  width: 100%;
+  height: 2.51rem;
+  background-image: url("../img/LOGO.png");
+  background-size: 60% 180%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+html[data-page='login'] #logoBanner .bgImg .tabs {
+  width: 100%;
+  height: 1rem;
+}
+html[data-page='login'] #logoBanner .bgImg .tabs > div {
+  width: 50%;
+  height: 100%;
+  float: left;
+  font-size: 0.28rem;
+  color: #FCA294;
+  font-weight: 400;
+  font-family: Microsoft YaHei;
+  text-align: center;
+  line-height: 1rem;
+}
+html[data-page='login'] #logoBanner .bgImg .tabs > div.act {
+  color: white;
+  position: relative;
+}
+html[data-page='login'] #logoBanner .bgImg .tabs > div.act::after {
+  content: '';
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid white;
+  position: absolute;
+  bottom: 0;
+  left: 47%;
+}
+html[data-page='login'] #Tab {
+  width: 100%;
+  height: 64vh;
+}
+html[data-page='login'] #Tab > div {
+  width: 100%;
+  height: 100%;
+  display: none;
+  padding-top: 0.2rem;
+}
+html[data-page='login'] #Tab > div > div {
+  width: 100%;
+  height: 1rem;
+}
+html[data-page='login'] #Tab > div > div.txt {
+  display: none;
+}
+html[data-page='login'] #Tab > div > div.txt.act {
+  display: block;
+  padding-right: 5%;
+  background-color: white;
+  margin-bottom: 2px;
+}
+html[data-page='login'] #Tab > div > div.txt.act > .img {
+  width: 10%;
+  height: 100%;
+  background-size: 0.25rem 0.28rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-position: 80% 50%;
+  float: left;
+}
+html[data-page='login'] #Tab > div > div.txt.act > .img.user {
+  background-image: url("../img/Liu/icon_account.png");
+}
+html[data-page='login'] #Tab > div > div.txt.act > .img.pass {
+  background-image: url("../img/Liu/icon_password.png");
+}
+html[data-page='login'] #Tab > div > div.txt.act > .img.phone {
+  background-size: 0.25rem 0.33rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("../img/Liu/icon_phone.png");
+}
+html[data-page='login'] #Tab > div > div.txt.act > .img.message {
+  background-size: 0.33rem 0.25rem;
+  background-image: url("../img/Liu/icon_message.png");
+}
+html[data-page='login'] #Tab > div > div.txt.act > input {
+  float: left;
+  width: 90%;
+  height: 100%;
+  border: none;
+  font-size: 0.28rem;
+  color: rgba(0, 0, 0, 0.5);
+  font-weight: 400;
+  font-family: Arial;
+  margin: 0;
+}
+html[data-page='login'] #Tab > div > div.txt.act > input::-webkit-input-placeholder {
+  font-size: 0.28rem;
+  color: #B2B2B2;
+  font-weight: 400;
+  font-family: Arial;
+}
+html[data-page='login'] #Tab > div > div.txt.act > input.message {
+  width: 60%;
+  height: 100%;
+}
+html[data-page='login'] #Tab > div > div.txt.act > .button {
+  width: 30%;
+  height: 100%;
+  float: right;
+  text-align: right;
+  line-height: 1rem;
+}
+html[data-page='login'] #Tab > div > div.txt.act > .button > a {
+  font-size: 0.28rem;
+  color: #FF4D4D;
+  font-weight: 400;
+  font-family: Arial;
+  text-decoration: underline;
+}
+html[data-page='login'] #Tab > div > div.txt.act > .radio {
+  width: 45%;
+  height: 100%;
+  padding-left: 15px;
+  float: left;
+  font-size: 0.26rem;
+  color: #666666;
+  font-weight: 400;
+  font-family: Arial;
+  line-height: 1rem;
+  position: relative;
+  right: 25px;
+}
+html[data-page='login'] #Tab > div > div.txt.act > .radio > input[type="radio"] {
+  width: 25px;
+  height: 25px;
+  opacity: 0;
+}
+html[data-page='login'] #Tab > div > div.txt.act > .radio > input[type="radio"] + label::after {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-left: 10px;
+  vertical-align: text-bottom;
+  border: 1px solid #eeeeee;
+  background-color: #eeeeee;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  content: "";
+  position: relative;
+  top: 2.5px;
+}
+html[data-page='login'] #Tab > div > div.txt.act > .radio > input[type="radio"]:checked + label::after {
+  background: linear-gradient(30deg, #b77bf9 0%, #e8564c 20%, #fca294 90%);
+  background-clip: content-box;
+  border-color: #eeeeee;
+  border-width: 5px;
+}
+html[data-page='login'] #Tab > div > div.yanzheng {
+  padding: 0.2rem;
+}
+html[data-page='login'] #Tab > div > div.yanzheng > div {
+  width: 40%;
+  height: 100%;
+  float: left;
+}
+html[data-page='login'] #Tab > div > div.yanzheng > div:last-child {
+  width: 60%;
+  height: 100%;
+}
+html[data-page='login'] #Tab > div > div.yanzheng > div > a {
+  display: none;
+  font-size: 0.28rem;
+  color: #FF4D4D;
+  font-weight: 400;
+  font-family: Arial;
+  text-decoration: underline;
+}
+html[data-page='login'] #Tab > div > div.yanzheng > div > a.act {
+  display: block;
+}
+html[data-page='login'] #Tab > div > div.yanzheng > div:last-child {
+  font-size: 0.26rem;
+  color: #666666;
+  font-weight: 400;
+  font-family: Arial;
+  text-align: right;
+}
+html[data-page='login'] #Tab > div > div.yanzheng > div:last-child > div {
+  float: right;
+}
+html[data-page='login'] #Tab > div > div.forget {
+  width: 95%;
+  height: auto;
+}
+html[data-page='login'] #Tab > div > div.forget > div > a {
+  text-align: right;
+  display: none;
+  font-size: 0.28rem;
+  color: #FF4D4D;
+  font-weight: 400;
+  font-family: Arial;
+  text-decoration: underline;
+}
+html[data-page='login'] #Tab > div > div.forget > div > a.act {
+  display: block;
+}
+html[data-page='login'] #Tab > div > div#loginGo,
+html[data-page='login'] #Tab > div > div#registerGo {
+  width: 90%;
+  height: 1rem;
+  margin: 2vh auto;
+  background-color: #ff4d4d;
+  font-size: 0.35rem;
+  color: white;
+  font-weight: 400;
+  font-family: Arial;
+  text-align: center;
+  line-height: 1rem;
+  border-radius: 5px;
+}
+html[data-page='login'] #Tab > div > div.registerTxt {
+  height: 0.5rem;
+  font-size: 0.26rem;
+  color: #E22927;
+  font-weight: 400;
+  font-family: Arial;
+  text-align: center;
+  line-height: 0.5rem;
+}
+html[data-page='login'] #Tab > div.act {
+  display: block;
+}
+/***************充值模块***************/
+/***模块一***/
+html[data-page='accountRecharge1'] {
+  background-color: white;
+}
+html[data-page='accountRecharge1'] #nav {
+  width: 100%;
+  height: 8vh;
+  position: relative;
+}
+html[data-page='accountRecharge1'] #nav a > div {
+  width: 10%;
+  height: 8vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("../img/Liu/back2.png");
+  background-size: 0.2rem 0.3rem;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+html[data-page='accountRecharge1'] #nav > div:last-child {
+  font-size: 0.36rem;
+  color: #2B2B2B;
+  font-weight: 400;
+  font-family: Arial;
+  text-align: center;
+  line-height: 8vh;
+}
+html[data-page='accountRecharge1'] .body {
+  width: 100%;
+  height: 82%;
+  overflow-y: scroll;
+}
+html[data-page='accountRecharge1'] .body::-webkit-scrollbar {
+  display: none;
+}
+html[data-page='accountRecharge1'] .body #prepaid {
+  width: 75%;
+  height: 1.6rem;
+  background-image: url("../img/Liu/bg_prepaid.png");
+  background-size: 100% 115%;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 0.5rem 10% 0.5rem 15%;
+}
+html[data-page='accountRecharge1'] .body #prepaid > div {
+  font-size: 0.3rem;
+  color: #FFFFFF;
+  font-weight: 400;
+  font-family: Arial;
+}
+html[data-page='accountRecharge1'] .body #prepaid > div:first-child {
+  width: 98%;
+  height: 0.5rem;
+  padding-left: 2%;
+}
+html[data-page='accountRecharge1'] .body #prepaid > div:last-child {
+  width: 100%;
+  height: 1.1rem;
+  font-size: 0.7rem;
+  color: #FFFFFF;
+  font-weight: 400;
+  font-family: Arial;
+  line-height: 1.1rem;
+}
+html[data-page='accountRecharge1'] .body #prepaid > div:last-child > span {
+  display: block;
+  width: 10%;
+  height: 100%;
+  float: left;
+}
+html[data-page='accountRecharge1'] .body #prepaid > div:last-child > input {
+  display: block;
+  width: 88%;
+  height: 100%;
+  background-color: transparent;
+  border: none;
+  float: right;
+  font-size: 0.7rem;
+  color: #FFFFFF;
+  font-weight: 400;
+  font-family: Arial;
+  line-height: 1.1rem;
+}
+html[data-page='accountRecharge1'] .body #prepaid > div:last-child > input::placeholder {
+  font-size: 0.7rem;
+  color: #FFFFFF;
+  font-weight: 400;
+  font-family: Arial;
+}
+html[data-page='accountRecharge1'] .body #prepaid > div:last-child > input::-webkit-input-placeholder {
+  /* WebKit browsers */
+  font-size: 0.7rem;
+  color: #FFFFFF;
+  font-weight: 400;
+  font-family: Arial;
+}
+html[data-page='accountRecharge1'] .body #prepaid > div:last-child > input:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  font-size: 0.7rem;
+  color: #FFFFFF;
+  font-weight: 400;
+  font-family: Arial;
+}
+html[data-page='accountRecharge1'] .body #prepaid > div:last-child > input::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  font-size: 0.7rem;
+  color: #FFFFFF;
+  font-weight: 400;
+  font-family: Arial;
+}
+html[data-page='accountRecharge1'] .body #prepaid > div:last-child > input:-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  font-size: 0.7rem;
+  color: #FFFFFF;
+  font-weight: 400;
+  font-family: Arial;
+}
+html[data-page='accountRecharge1'] .body #package {
+  width: 90%;
+  height: auto;
+  overflow: hidden;
+  margin: 0 auto;
+}
+html[data-page='accountRecharge1'] .body #package > div {
+  width: 27.8%;
+  height: 1.2rem;
+  margin: 0.1rem 2%;
+  border: 2px solid #DFDFDF;
+  float: left;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 0.4rem;
+  color: #000000;
+  font-weight: 400;
+  font-family: Arial;
+  padding-top: 0.2rem;
+}
+html[data-page='accountRecharge1'] .body #package > div > .interval {
+  font-size: 0.2rem !important;
+}
+html[data-page='accountRecharge1'] .body #package > div.active {
+  border: 2px solid rgba(232, 86, 76, 0.7);
+  box-shadow: 0 0 10px #fca294;
+  font-size: 0.4rem;
+  color: #E8564C;
+  font-weight: 400;
+  font-family: Arial;
+}
+html[data-page='accountRecharge1'] .body #accounting {
+  width: 90%;
+  height: auto;
+  margin: 0.2rem auto 0;
+  text-align: center;
+  font-size: 0.3rem;
+  color: #898989;
+  font-weight: 400;
+  font-family: Arial;
+}
+html[data-page='accountRecharge1'] .body #accounting > span {
+  color: #E8564C;
+}
+html[data-page='accountRecharge1'] .body #bill {
+  width: 90%;
+  height: auto;
+  margin: 0.5rem auto 0;
+  padding: 0.2rem 5%;
+  border-top: 0.03rem solid rgba(245, 245, 245);
+  border-bottom: 0.03rem solid rgba(245, 245, 245);
+  overflow: hidden;
+}
+html[data-page='accountRecharge1'] .body #bill > div:first-child {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+html[data-page='accountRecharge1'] .body #bill > div:first-child > div {
+  width: 30%;
+  height: auto;
+  float: left;
+  font-size: 0.3rem;
+  color: #5D5D5D;
+  font-weight: 400;
+  font-family: Arial;
+}
+html[data-page='accountRecharge1'] .body #bill > div:first-child > div:last-child {
+  width: 65%;
+  height: auto;
+  padding-right: 5%;
+  text-align: right;
+  position: relative;
+}
+html[data-page='accountRecharge1'] .body #bill > div:first-child > div:last-child > span {
+  position: absolute;
+  right: 0;
+  top: -0.06rem;
+  transform: scaleX(0.5);
+  font-size: 0.5rem;
+  color: #5D5D5D;
+  font-weight: 400;
+  font-family: Arial;
+}
+html[data-page='accountRecharge1'] .body #bill > .bills {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  overflow: hidden;
+}
+html[data-page='accountRecharge1'] .body #bill > .bills.act {
+  display: block;
+}
+html[data-page='accountRecharge1'] .body #bill > .bills > .billsK {
+  width: 90%;
+  height: 50%;
+  position: fixed;
+  bottom: -60%;
+  left: 0;
+  background-color: white;
+  padding: 5% 5%;
+}
+html[data-page='accountRecharge1'] .body #bill > .bills > .billsK > div {
+  width: 100%;
+  height: auto;
+}
+html[data-page='accountRecharge1'] .body #bill > .bills > .billsK > div:first-child {
+  width: 100%;
+  height: 15%;
+  font-size: 0.4rem;
+  color: #000000;
+  font-weight: 400;
+  font-family: Arial;
+}
+html[data-page='accountRecharge1'] .body #bill > .bills > .billsK > div:first-child > div {
+  width: 50%;
+  height: auto;
+  text-align: center;
+  float: left;
+}
+html[data-page='accountRecharge1'] .body #bill > .bills > .billsK > div:last-child {
+  width: 100%;
+  height: 75%;
+  font-size: 0.3rem;
+  color: #000000;
+  font-weight: 400;
+  font-family: Arial;
+  overflow-y: scroll;
+}
+html[data-page='accountRecharge1'] .body #bill > .bills > .billsK > div:last-child::-webkit-scrollbar {
+  display: none;
+}
+html[data-page='accountRecharge1'] .body #bill > .bills > .billsK > div:last-child > div {
+  width: 100%;
+  height: 10%;
+}
+html[data-page='accountRecharge1'] .body #bill > .bills > .billsK > div:last-child > div > div {
+  width: 50%;
+  height: auto;
+  text-align: center;
+  float: left;
+}
+html[data-page='accountRecharge1'] .body #bill > .bills > .back {
+  width: 100%;
+  height: 1rem;
+  position: fixed;
+  right: 0;
+  z-index: 3;
+  bottom: -51%;
+  text-align: center;
+  font-size: 0.35rem;
+  color: #FFFFFF;
+  font-weight: 400;
+  font-family: Arial;
+  background-color: #FF4D4D;
+  line-height: 1rem;
+}
+html[data-page='accountRecharge1'] .body #illustration {
+  margin-top: 0.5rem;
+  width: 100%;
+  height: 2rem;
+}
+html[data-page='accountRecharge1'] .body #illustration > div {
+  width: 50%;
+  height: 100%;
+  float: left;
+}
+html[data-page='accountRecharge1'] .body #illustration > div > div {
+  text-align: center;
+}
+html[data-page='accountRecharge1'] .body #illustration > div > div.img {
+  width: 100%;
+  height: 75%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+html[data-page='accountRecharge1'] .body #illustration > div > div:last-child {
+  font-size: 0.3rem;
+  color: #5D5D5D;
+  font-weight: 400;
+  font-family: Arial;
+}
+html[data-page='accountRecharge1'] .body #illustration > div.img1 > .img {
+  background-image: url("../img/Liu/jisudaozhang.png");
+  background-size: 30% 70%;
+}
+html[data-page='accountRecharge1'] .body #illustration > div.img2 > .img {
+  background-image: url("../img/Liu/yinhangjianguan.png");
+  background-size: 25% 70%;
+}
+html[data-page='accountRecharge1'] #nextGo {
+  width: 100%;
+  height: 10%;
+  position: fixed;
+  bottom: 0;
+  background-color: #F4F4F4;
+}
+html[data-page='accountRecharge1'] #nextGo > div {
+  float: left;
+}
+html[data-page='accountRecharge1'] #nextGo > div:first-child {
+  width: 70%;
+  height: 100%;
+}
+html[data-page='accountRecharge1'] #nextGo > div:first-child > div {
+  float: left;
+  width: 45%;
+  height: 100%;
+}
+html[data-page='accountRecharge1'] #nextGo > div:first-child > div:first-child {
+  padding-left: 5%;
+}
+html[data-page='accountRecharge1'] #nextGo > div:first-child > div:first-child > div {
+  text-align: left;
+}
+html[data-page='accountRecharge1'] #nextGo > div:first-child > div:first-child > div:first-child {
+  width: 100%;
+  height: 60%;
+  font-size: 0.3rem;
+  color: #5D5D5D;
+  font-weight: 400;
+  font-family: Arial;
+  text-decoration: line-through;
+  line-height: 7vh;
+}
+html[data-page='accountRecharge1'] #nextGo > div:first-child > div:first-child > div:last-child {
+  width: 100%;
+  height: 40%;
+  font-size: 0.2rem;
+  color: #000000;
+  font-weight: 400;
+  font-family: Arial;
+}
+html[data-page='accountRecharge1'] #nextGo > div:first-child > div:last-child {
+  font-size: 0.4rem;
+  color: #E22927;
+  font-weight: 900;
+  font-family: Arial;
+  text-align: right;
+  line-height: 10vh;
+}
+html[data-page='accountRecharge1'] #nextGo > div:last-child {
+  width: 30%;
+  height: 100%;
+  background-color: #FF4D4D;
+  font-size: 0.35rem;
+  color: #FFFFFF;
+  font-weight: 400;
+  font-family: Arial;
+  text-align: center;
+  line-height: 10vh;
+}
+/***模块二***/
+html[data-page='accountRecharge2'] {
+  background-color: white;
+}
+html[data-page='accountRecharge2'] #nav {
+  width: 100%;
+  height: 8vh;
+  padding-bottom: 1%;
+  position: relative;
+}
+html[data-page='accountRecharge2'] #nav a > div {
+  width: 10%;
+  height: 8vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("../img/Liu/back2.png");
+  background-size: 0.2rem 0.3rem;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+html[data-page='accountRecharge2'] #nav > div:last-child {
+  font-size: 0.36rem;
+  color: #2B2B2B;
+  font-weight: 400;
+  font-family: Arial;
+  text-align: center;
+  line-height: 8vh;
+}
+html[data-page='accountRecharge2'] .body {
+  width: 100%;
+  height: 91%;
+  overflow-y: scroll;
+}
+html[data-page='accountRecharge2'] .body::-webkit-scrollbar {
+  display: none;
+}
+html[data-page='accountRecharge2'] .body #money {
+  width: 70%;
+  height: 2rem;
+  margin: 0 auto 0.5rem;
+  background: linear-gradient(132deg, #b77bf9 0%, #e8564c 0%, #fca294 100%);
+  box-shadow: 0 6px 21px rgba(85, 120, 228, 0.36);
+  -webkit-border-radius: 0.1rem;
+  -moz-border-radius: 0.1rem;
+  border-radius: 0.1rem;
+  padding: 0.2rem 10%;
+}
+html[data-page='accountRecharge2'] .body #money > div {
+  text-align: center;
+}
+html[data-page='accountRecharge2'] .body #money > div:first-child {
+  font-size: 0.3rem;
+  color: white;
+  font-weight: 400;
+  font-family: Arial;
+  width: 100%;
+  height: 0.8rem;
+  line-height: 0.8rem;
+}
+html[data-page='accountRecharge2'] .body #money > div:last-child {
+  font-size: 0.8rem;
+  color: white;
+  font-weight: bold;
+  font-family: Arial;
+  width: 100%;
+  height: 1.2rem;
+  line-height: 1.2rem;
+}
+html[data-page='accountRecharge2'] .body #bill {
+  width: 90%;
+  height: auto;
+  margin: 0.2rem auto 0;
+  overflow: hidden;
+}
+html[data-page='accountRecharge2'] .body #bill > div:first-child {
+  width: 100%;
+  height: auto;
+}
+html[data-page='accountRecharge2'] .body #bill > div:first-child > div {
+  width: 30%;
+  height: auto;
+  float: left;
+  font-size: 0.3rem;
+  color: #5D5D5D;
+  font-weight: 400;
+  font-family: Arial;
+}
+html[data-page='accountRecharge2'] .body #bill > div:first-child > div:last-child {
+  width: 65%;
+  height: auto;
+  padding-right: 5%;
+  text-align: right;
+  position: relative;
+}
+html[data-page='accountRecharge2'] .body #bill > div:first-child > div:last-child > span {
+  position: absolute;
+  right: 0;
+  top: -0.06rem;
+  transform: scaleX(0.5);
+  font-size: 0.5rem;
+  color: #5D5D5D;
+  font-weight: 400;
+  font-family: Arial;
+}
+html[data-page='accountRecharge2'] .body #bill > .bills {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  overflow: hidden;
+}
+html[data-page='accountRecharge2'] .body #bill > .bills.act {
+  display: block;
+}
+html[data-page='accountRecharge2'] .body #bill > .bills > .billsK {
+  width: 90%;
+  height: 50%;
+  position: fixed;
+  bottom: -60%;
+  left: 0;
+  background-color: white;
+  padding: 5% 5%;
+}
+html[data-page='accountRecharge2'] .body #bill > .bills > .billsK > div {
+  width: 100%;
+  height: auto;
+}
+html[data-page='accountRecharge2'] .body #bill > .bills > .billsK > div:first-child {
+  width: 100%;
+  height: 15%;
+  font-size: 0.4rem;
+  color: #000000;
+  font-weight: 400;
+  font-family: Arial;
+}
+html[data-page='accountRecharge2'] .body #bill > .bills > .billsK > div:first-child > div {
+  width: 50%;
+  height: auto;
+  text-align: center;
+  float: left;
+}
+html[data-page='accountRecharge2'] .body #bill > .bills > .billsK > div:last-child {
+  width: 100%;
+  height: 75%;
+  font-size: 0.3rem;
+  color: #000000;
+  font-weight: 400;
+  font-family: Arial;
+  overflow-y: scroll;
+}
+html[data-page='accountRecharge2'] .body #bill > .bills > .billsK > div:last-child::-webkit-scrollbar {
+  display: none;
+}
+html[data-page='accountRecharge2'] .body #bill > .bills > .billsK > div:last-child > div {
+  width: 100%;
+  height: 10%;
+}
+html[data-page='accountRecharge2'] .body #bill > .bills > .billsK > div:last-child > div > div {
+  width: 50%;
+  height: auto;
+  text-align: center;
+  float: left;
+}
+html[data-page='accountRecharge2'] .body #bill > .bills > .back {
+  width: 100%;
+  height: 1rem;
+  position: fixed;
+  right: 0;
+  z-index: 3;
+  bottom: -51%;
+  text-align: center;
+  font-size: 0.35rem;
+  color: #FFFFFF;
+  font-weight: 400;
+  font-family: Arial;
+  background-color: #FF4D4D;
+  line-height: 1rem;
+}
+html[data-page='accountRecharge2'] .body #coupon {
+  width: 90%;
+  height: auto;
+  margin: 0.2rem auto 0;
+  overflow: hidden;
+}
+html[data-page='accountRecharge2'] .body #coupon > div:first-child {
+  width: 100%;
+  height: auto;
+}
+html[data-page='accountRecharge2'] .body #coupon > div:first-child > div {
+  width: 30%;
+  height: auto;
+  float: left;
+  font-size: 0.3rem;
+  color: #5D5D5D;
+  font-weight: 400;
+  font-family: Arial;
+}
+html[data-page='accountRecharge2'] .body #coupon > div:first-child > div:last-child {
+  color: #E22927;
+  width: 65%;
+  height: auto;
+  padding-right: 5%;
+  text-align: right;
+  position: relative;
+}
+html[data-page='accountRecharge2'] .body #coupon > div:first-child > div:last-child > span {
+  position: absolute;
+  right: 0;
+  top: -0.06rem;
+  transform: scaleX(0.5);
+  font-size: 0.5rem;
+  color: #E22927;
+  font-weight: 400;
+  font-family: Arial;
+}
+html[data-page='accountRecharge2'] .body #coupon > .bills {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  overflow: hidden;
+}
+html[data-page='accountRecharge2'] .body #coupon > .bills.act {
+  display: block;
+}
+html[data-page='accountRecharge2'] .body #coupon > .bills > .billsK {
+  width: 90%;
+  height: 50%;
+  position: fixed;
+  bottom: -60%;
+  left: 0;
+  background-color: white;
+  padding: 5% 5%;
+}
+html[data-page='accountRecharge2'] .body #coupon > .bills > .billsK > div {
+  width: 100%;
+  height: auto;
+}
+html[data-page='accountRecharge2'] .body #coupon > .bills > .billsK > div:first-child {
+  width: 100%;
+  height: 15%;
+  font-size: 0.4rem;
+  color: #000000;
+  font-weight: 400;
+  font-family: Arial;
+}
+html[data-page='accountRecharge2'] .body #coupon > .bills > .billsK > div:first-child > div {
+  width: 50%;
+  height: auto;
+  text-align: center;
+  float: left;
+}
+html[data-page='accountRecharge2'] .body #coupon > .bills > .billsK > div:last-child {
+  width: 100%;
+  height: 75%;
+  font-size: 0.3rem;
+  color: #000000;
+  font-weight: 400;
+  font-family: Arial;
+  overflow-y: scroll;
+}
+html[data-page='accountRecharge2'] .body #coupon > .bills > .billsK > div:last-child::-webkit-scrollbar {
+  display: none;
+}
+html[data-page='accountRecharge2'] .body #coupon > .bills > .billsK > div:last-child > div {
+  width: 100%;
+  height: 10%;
+  margin-bottom: 0.2rem;
+}
+html[data-page='accountRecharge2'] .body #coupon > .bills > .billsK > div:last-child > div > div {
+  width: 50%;
+  height: auto;
+  text-align: center;
+  float: left;
+}
+html[data-page='accountRecharge2'] .body #coupon > .bills > .back {
+  width: 100%;
+  height: 1rem;
+  position: fixed;
+  right: 0;
+  z-index: 3;
+  bottom: -51%;
+  text-align: center;
+  font-size: 0.35rem;
+  color: #FFFFFF;
+  font-weight: 400;
+  font-family: Arial;
+  background-color: #FF4D4D;
+  line-height: 1rem;
+}
+html[data-page='accountRecharge2'] .body #paymentMethod {
+  width: 90%;
+  height: auto;
+  margin: 0.2rem auto 0;
+}
+html[data-page='accountRecharge2'] .body #paymentMethod > div:first-child {
+  font-size: 0.3rem;
+  color: #333333;
+  font-weight: 400;
+  font-family: Arial;
+}
+html[data-page='accountRecharge2'] .body #paymentMethod > div:last-child {
+  width: 100%;
+  height: auto;
+  padding-top: 0.2rem;
+}
+html[data-page='accountRecharge2'] .body #paymentMethod > div:last-child > div {
+  width: 100%;
+  height: 1rem;
+  border-bottom: 1px solid #EEEEEE;
+}
+html[data-page='accountRecharge2'] .body #paymentMethod > div:last-child > div > div {
+  width: 68%;
+  height: 100%;
+  float: left;
+  line-height: 1rem;
+  font-size: 0.24rem;
+  color: #333333;
+  font-weight: 400;
+  font-family: Arial;
+  padding-left: 2%;
+}
+html[data-page='accountRecharge2'] .body #paymentMethod > div:last-child > div > div:first-child,
+html[data-page='accountRecharge2'] .body #paymentMethod > div:last-child > div > div:last-child {
+  width: 15%;
+  height: 100%;
+  padding-left: 0;
+}
+html[data-page='accountRecharge2'] .body #paymentMethod > div:last-child > div > div:first-child {
+  background-size: 70% 70%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+html[data-page='accountRecharge2'] .body #paymentMethod > div:last-child > div > div:last-child {
+  position: relative;
+}
+html[data-page='accountRecharge2'] .body #paymentMethod > div:last-child > div > div:last-child > input[type="radio"] {
+  position: absolute;
+  right: 0.1rem;
+  top: 0.25rem;
+  z-index: 1;
+  width: 0.5rem;
+  height: 0.5rem;
+  opacity: 0;
+}
+html[data-page='accountRecharge2'] .body #paymentMethod > div:last-child > div > div:last-child > input[type="radio"] + label::after {
+  display: inline-block;
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 50%;
+  margin-left: 10px;
+  vertical-align: text-bottom;
+  border: 1px solid #eeeeee;
+  background-color: #eeeeee;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  content: "";
+  position: absolute;
+  right: 0.1rem;
+  top: 0.3rem;
+  z-index: 1;
+}
+html[data-page='accountRecharge2'] .body #paymentMethod > div:last-child > div > div:last-child > input[type="radio"]:checked + label::after {
+  background: linear-gradient(30deg, #b77bf9 0%, #e8564c 20%, #fca294 90%);
+  background-clip: content-box;
+  border-color: #eeeeee;
+  border-width: 0.1rem;
+}
+html[data-page='accountRecharge2'] .body #paymentMethod > div:last-child > div.Alipay > div:first-child {
+  background-image: url("../img/Liu/AlipayLogo.png");
+}
+html[data-page='accountRecharge2'] .body #paymentMethod > div:last-child > div.WeChat > div:first-child {
+  background-image: url("../img/Liu/WeChatLogo.png");
+  background-size: 65% 60%;
+}
+html[data-page='accountRecharge2'] .body #paymentMethod > div > p {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  font-size: 0.24rem;
+  color: #333333;
+  font-weight: 400;
+  font-family: Arial;
+  margin-top: 0.2rem;
+}
+html[data-page='accountRecharge2'] .body #paymentMethod > div > p > a {
+  font-size: 0.24rem;
+  color: #E22927;
+  font-weight: 400;
+  font-family: Arial;
+  text-decoration: underline;
+}
+html[data-page='accountRecharge2'] .body #rechargeGo {
+  width: 80%;
+  height: 0.9rem;
+  margin: 1rem auto 1rem;
+  background: linear-gradient(180deg, #e8564c 0%, #fca294 100%);
+  box-shadow: 0 6px 21px #fca294;
+  font-size: 0.28rem;
+  color: #FFFFFF;
+  font-weight: 400;
+  font-family: Arial;
+  text-align: center;
+  line-height: 0.9rem;
+  border-radius: 5px;
+}
+/***充值完成***/
+html[data-page='paymentCompleted'] {
+  background-color: white;
+}
+html[data-page='paymentCompleted'] #nav {
+  width: 100%;
+  height: 8vh;
+  background-color: #E74A45;
+  position: relative;
+  text-align: center;
+  font-size: 0.4rem;
+  color: white;
+  font-weight: 400;
+  font-family: Arial;
+  line-height: 8vh;
+}
+html[data-page='paymentCompleted'] #nav a > div {
+  width: 10%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("../img/Liu/back.png");
+  background-size: 0.2rem 0.3rem;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+html[data-page='paymentCompleted'] .body {
+  width: 100%;
+  height: 92vh;
+  overflow-y: scroll;
+}
+html[data-page='paymentCompleted'] .body::-webkit-scrollbar {
+  display: none;
+}
+html[data-page='paymentCompleted'] .body #payment {
+  padding-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+html[data-page='paymentCompleted'] .body #payment > div:first-child {
+  width: 1.6rem;
+  height: 1.6rem;
+  margin: 0 auto;
+  background-image: url("../img/Liu/PaymentCompleted.png");
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-bottom: 0.5rem;
+}
+html[data-page='paymentCompleted'] .body #payment > div:last-child > div {
+  text-align: center;
+}
+html[data-page='paymentCompleted'] .body #payment > div:last-child > div:first-child {
+  font-size: 0.4rem;
+  color: #89898B;
+  font-weight: 400;
+  font-family: Arial;
+  margin-bottom: 0.2rem;
+}
+html[data-page='paymentCompleted'] .body #payment > div:last-child > div:last-child {
+  font-size: 0.52rem;
+  color: #FE2408;
+  font-weight: 400;
+  font-family: Arial;
+}
+html[data-page='paymentCompleted'] .body #information > div {
+  width: 90%;
+  height: 0.6rem;
+  border-bottom: 2px solid #F4F4F4;
+  padding: 0.2rem 5%;
+}
+html[data-page='paymentCompleted'] .body #information > div > div {
+  width: 55%;
+  height: 100%;
+  float: left;
+}
+html[data-page='paymentCompleted'] .body #information > div > div:first-child {
+  width: 45%;
+}
+html[data-page='paymentCompleted'] .body #information > div > div:first-child > div {
+  float: left;
+}
+html[data-page='paymentCompleted'] .body #information > div > div:first-child > div:first-child {
+  width: 30%;
+  height: 100%;
+  background-image: url("../img/Liu/pay_account.png");
+  background-size: 50% 60%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+html[data-page='paymentCompleted'] .body #information > div > div:first-child > div:last-child {
+  width: 70%;
+  height: 100%;
+  line-height: 0.6rem;
+  font-size: 0.3rem;
+  color: #3B4248;
+  font-weight: 400;
+  font-family: Arial;
+}
+html[data-page='paymentCompleted'] .body #information > div > div:last-child {
+  font-size: 0.3rem;
+  color: #8C8D8F;
+  font-weight: 400;
+  font-family: Arial;
+  line-height: 0.6rem;
+  text-align: right;
+}
+html[data-page='paymentCompleted'] .body #information > div:last-child > div:first-child > div:first-child {
+  background-image: url("../img/Liu/pay_time.png");
+  background-size: 50% 75%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+html[data-page='paymentCompleted'] .body #homepage {
+  width: 80%;
+  height: 0.8rem;
+  border-radius: 1rem;
+  margin: 0.5rem auto 0;
+  background: linear-gradient(180deg, #e8564c 0%, #fca294 100%);
+  box-shadow: 0 6px 21px #fca294;
+  font-size: 0.36rem;
+  color: white;
+  font-weight: 400;
+  font-family: Arial;
+  line-height: 0.8rem;
+  text-align: center;
+}
+/***************客服模块***************/
+html[data-page='customerservice'] {
+  background-color: white;
+}
+html[data-page='customerservice'] #nav {
+  width: 100%;
+  height: 8vh;
+  padding-top: 2.5vh;
+  background-color: #E74A45;
+  font-size: 0.3rem;
+  color: #FFFFFF;
+  font-weight: 400;
+  font-family: Microsoft YaHei;
+  line-height: 8vh;
+}
+html[data-page='customerservice'] #nav div {
+  float: left;
+}
+html[data-page='customerservice'] #nav #back {
+  width: 5vh;
+  height: 8vh;
+  position: relative;
+  background-image: url("../img/Liu/back.png");
+  background-size: 0.2rem 0.3rem;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+html[data-page='customerservice'] #nav .title {
+  width: 30%;
+  height: 100%;
+}
+html[data-page='customerservice'] #nav .artificial {
+  width: 30%;
+  height: 100%;
+  float: right;
+  margin-right: 2vh;
+  text-align: right;
+}
+html[data-page='customerservice'] #chatBox {
+  width: 92%;
+  height: 80vh;
+  padding: 1.5vh 4% 0.5vh;
+  overflow-y: scroll;
+}
+html[data-page='customerservice'] #chatBox::-webkit-scrollbar {
+  display: none;
+}
+html[data-page='customerservice'] #chatBox > div:not(.historical) {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  margin-bottom: 0.2rem;
+}
+html[data-page='customerservice'] #chatBox > div:not(.historical) div {
+  width: 0.7rem;
+  height: 0.7rem;
+  background-size: 100% 100%;
+  background-position: center;
+}
+html[data-page='customerservice'] #chatBox > div:not(.historical) > p {
+  font-size: 0.3rem;
+  color: #000000;
+  font-weight: 400;
+  font-family: Arial;
+  width: auto;
+  height: auto;
+  margin-top: 0.2rem;
+  max-width: 75%;
+  padding: 0.1rem 0.2rem;
+  position: relative;
+}
+html[data-page='customerservice'] #chatBox > div:not(.historical) > p span {
+  overflow: hidden;
+  word-wrap: break-word;
+  word-break: normal;
+}
+html[data-page='customerservice'] #chatBox > div:not(.historical).customer.auto span {
+  color: #E8564C;
+}
+html[data-page='customerservice'] #chatBox .customer div {
+  float: left;
+  background-image: url("../img/Liu/customerT.png");
+}
+html[data-page='customerservice'] #chatBox .customer > p {
+  float: left;
+  margin-left: 5%;
+  background-color: #E6E7EB;
+}
+html[data-page='customerservice'] #chatBox .customer > p:before {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  border: 0.2rem solid transparent;
+  border-right: 0.2rem solid #E6E7EB;
+  border-top: 0.2rem solid #E6E7EB;
+  position: absolute;
+  top: 0;
+  left: -0.2rem;
+  z-index: 2;
+}
+html[data-page='customerservice'] #chatBox .user div {
+  float: right;
+  background-image: url("../img/Liu/customerT.png");
+}
+html[data-page='customerservice'] #chatBox .user > p {
+  float: right;
+  margin-right: 5%;
+  background-color: #E8564C;
+  color: white!important;
+}
+html[data-page='customerservice'] #chatBox .user > p:after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  border: 0.2rem solid transparent;
+  border-left: 0.2rem solid #E8564C;
+  border-top: 0.2rem solid #E8564C;
+  position: absolute;
+  top: 0;
+  right: -0.2rem;
+  z-index: 2;
+}
+html[data-page='customerservice'] #chatBox .historical {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  font-size: 0.36rem;
+  color: #13A0FF;
+  font-weight: 400;
+  font-family: Arial;
+}
+html[data-page='customerservice'] #inputBox {
+  width: 100%;
+  height: 0.8rem;
+  box-shadow: 0px -3px 6px rgba(0, 0, 0, 0.16);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+html[data-page='customerservice'] #inputBox div {
+  float: left;
+}
+html[data-page='customerservice'] #inputBox .input {
+  width: 80%;
+  height: 100%;
+}
+html[data-page='customerservice'] #inputBox .input input {
+  display: block;
+  width: 90%;
+  height: 90%;
+  margin-top: 0.04rem;
+  padding: 0 5%;
+  border: none;
+  font-size: 0.3rem;
+  color: #5D5D5D;
+  font-weight: 400;
+  font-family: Arial;
+  caret-color: red;
+}
+html[data-page='customerservice'] #inputBox .send {
+  width: 20%;
+  height: 100%;
+}
+html[data-page='customerservice'] #inputBox .send span {
+  display: block;
+  width: 80%;
+  height: 0.6rem;
+  text-align: center;
+  background-color: #E8564C;
+  border-radius: 5px;
+  font-size: 0.3rem;
+  color: white;
+  font-weight: 400;
+  font-family: Arial;
+  line-height: 0.65rem;
+  margin-top: 0.1rem;
+  float: right;
+  margin-right: 10%;
+}
+/***************活动模块***************/
+html[data-page='activity'] #activity {
+  width: 100%;
+  height: 88vh;
+  padding: 4vh 3% 0;
+}
+html[data-page='activity'] #activity a:not(:last-child) {
+  display: block;
+  margin-bottom: 3vh;
+}
+html[data-page='activity'] #activity a:not(:last-child) > div {
+  width: 100%;
+  height: 2rem;
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+html[data-page='activity'] #activity a:last-child {
+  display: block;
+  margin-bottom: 3vh;
+  position: relative;
+}
+html[data-page='activity'] #activity a:last-child > div {
+  width: 100%;
+  height: 2rem;
+  background-image: url("../img/Liu/kaifazhong.png");
+  background-size: 40% 70%;
+  background-position: 50% 0;
+  background-repeat: no-repeat;
+  font-size: 0.15rem;
+  color: #999999;
+  font-weight: 400;
+  font-family: Arial;
+  text-align: center;
+  line-height: 3.5rem;
+}
+/***************安全模块***************/
+html[data-page='security'] #nav {
+  width: 100%;
+  height: 12vh;
+  background-color: #E74A45;
+  position: relative;
+  text-align: center;
+  font-size: 0.4rem;
+  color: white;
+  font-weight: 400;
+  font-family: Arial;
+  line-height: 8vh;
+  padding-top: 4vh;
+}
+html[data-page='security'] #nav #back {
+  width: 10%;
+  height: 8vh;
+  position: absolute;
+  top: 4vh;
+  left: 0;
+  background-image: url("../img/Liu/back.png");
+  background-size: 0.2rem 0.3rem;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+html[data-page='security'] .body {
+  width: 100%;
+  height: 81vh;
+  overflow-y: scroll;
+}
+html[data-page='security'] .body::-webkit-scrollbar {
+  display: none;
+}
+html[data-page='security'] .body .module {
+  width: 100%;
+  height: auto;
+  border-bottom: 0.1rem solid #E5E5E5;
+}
+html[data-page='security'] .body .module#module1 > div:first-child {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+html[data-page='security'] .body .module#module1 > div:first-child > div {
+  width: 50%;
+  height: 4rem;
+  float: left;
+}
+html[data-page='security'] .body .module#module1 > div:first-child > div:first-child {
+  height: 2.7rem;
+  font-size: 0.3rem;
+  color: #E8564C;
+  font-weight: 400;
+  font-family: Arial;
+  text-align: right;
+  padding-top: 1.3rem;
+}
+html[data-page='security'] .body .module#module1 > div:first-child > div:first-child > div {
+  margin-bottom: 0.2rem;
+}
+html[data-page='security'] .body .module#module1 > div:first-child > div:first-child > div > span {
+  font-weight: bold;
+  font-size: 0.4rem;
+}
+html[data-page='security'] .body .module#module1 > div:first-child > div:first-child > div:first-child {
+  font-size: 0.3rem;
+  color: #000000;
+  font-weight: 900;
+  font-family: Arial;
+}
+html[data-page='security'] .body .module#module1 > div:first-child > div:first-child > div:last-child {
+  font-size: 0.22rem;
+  color: #000000;
+  font-weight: 400;
+  font-family: Arial;
+}
+html[data-page='security'] .body .module#module1 > div:first-child > div:last-child {
+  background-image: url("../img/Liu/security_1.png");
+  background-size: 2rem 3rem;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+html[data-page='security'] .body .module#module1 > div:last-child {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+html[data-page='security'] .body .module#module1 > div:last-child > div {
+  width: 50%;
+  height: 4rem;
+  float: right;
+}
+html[data-page='security'] .body .module#module1 > div:last-child > div:first-child {
+  width: 40%;
+  height: 2.5rem;
+  font-size: 0.3rem;
+  color: #E8564C;
+  font-weight: 400;
+  font-family: Arial;
+  text-align: left;
+  padding-top: 1.5rem;
+  padding-left: 10%;
+}
+html[data-page='security'] .body .module#module1 > div:last-child > div:first-child > div {
+  margin-bottom: 0.2rem;
+}
+html[data-page='security'] .body .module#module1 > div:last-child > div:first-child > div > span {
+  font-weight: bold;
+  font-size: 0.4rem;
+}
+html[data-page='security'] .body .module#module1 > div:last-child > div:first-child > div:first-child {
+  font-size: 0.3rem;
+  color: #000000;
+  font-weight: 900;
+  font-family: Arial;
+}
+html[data-page='security'] .body .module#module1 > div:last-child > div:first-child > div:last-child {
+  font-size: 0.22rem;
+  color: #000000;
+  font-weight: 400;
+  font-family: Arial;
+}
+html[data-page='security'] .body .module#module1 > div:last-child > div:last-child {
+  background-image: url("../img/Liu/security_2.png");
+  background-size: 3rem 2rem;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+html[data-page='security'] .body .module#module2 > div {
+  margin: 0 auto;
+}
+html[data-page='security'] .body .module#module2 > div:nth-child(2) > div {
+  margin: 0 auto 0.5rem;
+}
+html[data-page='security'] .body .module#module2 > div:nth-child(2) > div:nth-child(1) {
+  width: 55%;
+  height: 0.5rem;
+  margin: 0.5rem auto;
+  background-image: url("../img/Liu/security_4.png");
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+html[data-page='security'] .body .module#module2 > div:nth-child(2) > div:nth-child(2) {
+  width: 50%;
+  height: auto;
+  font-size: 0.3rem;
+  color: #000000;
+  font-weight: 900;
+  font-family: Arial;
+  overflow: hidden;
+}
+html[data-page='security'] .body .module#module2 > div:nth-child(2) > div:nth-child(2) > div {
+  float: left;
+}
+html[data-page='security'] .body .module#module2 > div:nth-child(2) > div:nth-child(2) > div:first-child {
+  width: 0.5rem;
+  height: 0.5rem;
+  background-image: url("../img/Liu/chongzhishijian.png");
+  background-size: 90% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+html[data-page='security'] .body .module#module2 > div:nth-child(2) > div:nth-child(2) > div:last-child {
+  width: 85%;
+  height: 0.5rem;
+  text-align: center;
+  line-height: 0.5rem;
+}
+html[data-page='security'] .body .module#module2 > div:nth-child(2) > div:nth-child(3),
+html[data-page='security'] .body .module#module2 > div:nth-child(2) > div:nth-child(4) {
+  width: 55%;
+  height: auto;
+  text-align: center;
+  font-size: 0.4rem;
+  color: #E8564C;
+  font-weight: 900;
+  font-family: Arial;
+  margin-bottom: 0.2rem;
+}
+html[data-page='security'] .body .module#module2 > div:nth-child(2) > div:nth-child(3):nth-child(4),
+html[data-page='security'] .body .module#module2 > div:nth-child(2) > div:nth-child(4):nth-child(4) {
+  margin-bottom: 0.5rem;
+}
+html[data-page='security'] .body .module#module2 > div:first-child {
+  width: 70%;
+  height: 7.6rem;
+  background-image: url("../img/Liu/security_3.png");
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+html[data-page='security'] .body .module#module2 > div:last-child > div {
+  margin-bottom: 0.5rem !important;
+}
+html[data-page='security'] .body .module#module2 > div:last-child > div:first-child {
+  width: 70%;
+  height: 1rem;
+  margin: 0 auto;
+  background-image: url("../img/Liu/zhongguojianshe.png");
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+html[data-page='security'] .body .module#module2 > div:last-child > div:last-child {
+  font-size: 0.24rem;
+  color: #000000;
+  font-weight: 900;
+  font-family: Arial;
+  text-align: center;
+}
+html[data-page='security'] .body .module#module2 > div:last-child > div:nth-child(2) {
+  width: 60%;
+  height: 0.55rem;
+  margin: 0 auto;
+  background-image: url("../img/Liu/txt_zhongguojianshe.png");
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+html[data-page='security'] .body .module#module3 {
+  padding: 0.5rem 10%;
+  border-bottom: none;
+  margin-bottom: 0.2rem;
+}
+html[data-page='security'] .body .module#module3 > div {
+  margin: 0 auto 1rem;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+html[data-page='security'] .body .module#module3 > div:nth-child(1) > div {
+  width: 50%;
+  height: 2rem;
+  float: left;
+}
+html[data-page='security'] .body .module#module3 > div:nth-child(1) > div:first-child {
+  background-image: url("../img/Liu/security_5.png");
+  background-size: 80% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+html[data-page='security'] .body .module#module3 > div:nth-child(1) > div:last-child {
+  background-image: url("../img/Liu/security_6.png");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 75% 70%;
+}
+html[data-page='security'] .body .module#module3 > div:nth-child(2) {
+  width: 90%;
+  height: auto;
+  padding: 0 5%;
+}
+html[data-page='security'] .body .module#module3 > div:nth-child(2) > div {
+  width: 33.33%;
+  height: auto;
+  float: left;
+  font-size: 0.5rem;
+  color: #E8564C;
+  font-weight: 900;
+  font-family: Arial;
+  text-align: center;
+}
+html[data-page='security'] .body .module#module3 > div:nth-child(3) {
+  width: 90%;
+  height: auto;
+  font-size: 0.4rem;
+  color: #000000;
+  font-weight: 900;
+  font-family: Arial;
+  text-align: center;
+  margin-bottom: 0;
+}
+/***************邀请有礼模块***************/
+html[data-page='invitecourtesy'] {
+  background-color: #F64841;
+}
+html[data-page='invitecourtesy'] #banner {
+  width: 100%;
+  height: 6.7rem;
+  background-image: url("../img/Liu/Invite_ban1.png");
+  background-size: 100% 100%;
+  position: relative;
+  padding-top: 1.4rem;
+}
+html[data-page='invitecourtesy'] #banner > div {
+  margin: 0 auto;
+}
+html[data-page='invitecourtesy'] #banner > div:not(:last-child) {
+  position: relative;
+  z-index: 2;
+}
+html[data-page='invitecourtesy'] #banner > div:nth-child(1) {
+  width: 90%;
+  height: 1rem;
+  background-image: url("../img/Liu/Invite_txt.png");
+  background-size: 100% 100%;
+  margin-bottom: 0.3rem;
+}
+html[data-page='invitecourtesy'] #banner > div:nth-child(2) {
+  width: 90%;
+  height: auto;
+  font-size: 0.24rem;
+  color: white;
+  font-weight: 400;
+  font-family: Arial;
+  text-align: center;
+}
+html[data-page='invitecourtesy'] #banner > div:nth-child(3) {
+  width: 100%;
+  height: 5rem;
+  background-image: url("../img/Liu/Invite_img1.png");
+  background-size: 100% 100%;
+}
+html[data-page='invitecourtesy'] #banner > div:nth-child(4) {
+  position: absolute;
+  width: 100%;
+  height: 6.7rem;
+  background-image: url("../img/Liu/Invite_img3.png");
+  background-size: 200% 200%;
+  background-position: 50% 0;
+  z-index: 1;
+  left: 0;
+  bottom: 0;
+}
+html[data-page='invitecourtesy'] #banner > div:last-child {
+  width: 10%;
+  height: 1rem;
+  background-image: url("../img/Liu/back.png");
+  background-size: 0.2rem 0.3rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 0;
+  top: 0.4rem;
+}
+html[data-page='invitecourtesy'] #shunxu {
+  width: 83%;
+  height: auto;
+  padding: 3% 5% 1%;
+  margin: 0 auto 0.2rem;
+  background-color: #FFFBF2;
+  border-radius: 20px;
+  overflow: hidden;
+}
+html[data-page='invitecourtesy'] #shunxu > div {
+  float: left;
+}
+html[data-page='invitecourtesy'] #shunxu > div.ban:not(:last-child) {
+  width: 21%;
+  height: 1.8rem;
+}
+html[data-page='invitecourtesy'] #shunxu > div.ban:not(:last-child) > div:first-child {
+  width: 100%;
+  height: 1rem;
+  background-size: 80% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-bottom: 0.2rem;
+}
+html[data-page='invitecourtesy'] #shunxu > div.ban:not(:last-child) > div:last-child {
+  width: 100%;
+  height: 0.6rem;
+  font-size: 0.2rem;
+  color: #000000;
+  font-weight: 400;
+  font-family: Arial;
+  text-align: center;
+}
+html[data-page='invitecourtesy'] #shunxu > div.ban:last-child {
+  width: 25%;
+  height: 1.6rem;
+}
+html[data-page='invitecourtesy'] #shunxu > div.ban:last-child > div {
+  width: 100%;
+  height: 1.8rem;
+  background-size: 100% 70%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+html[data-page='invitecourtesy'] #shunxu > div.li {
+  width: 4%;
+  height: 1.5rem;
+  font-size: 0.2rem;
+  color: #F64841;
+  font-weight: 400;
+  font-family: Arial;
+  text-align: center;
+  line-height: 1.5rem;
+}
+html[data-page='invitecourtesy'] #rule {
+  width: 65%;
+  height: auto;
+  padding: 4% 14% 2%;
+  margin: 0 auto 0.2rem;
+  background-color: #FFFBF2;
+  border-radius: 10px;
+}
+html[data-page='invitecourtesy'] #rule > div:not(:last-child) {
+  text-align: center;
+  font-size: 0.24rem;
+  color: #000000;
+  font-weight: bold;
+  font-family: RTWSShangGoG0v1-Bold;
+  margin-bottom: 0.2rem;
+  background: linear-gradient(119deg, #fa6044 0%, #ff1616 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+html[data-page='invitecourtesy'] #rule > div:last-child {
+  text-align: center;
+  font-size: 0.2rem;
+  color: #000000;
+  font-weight: 400;
+  font-family: RTWSShangGoG0v1-Bold;
+}
+html[data-page='invitecourtesy'] #ranking {
+  width: 95%;
+  height: auto;
+  margin: 0 auto;
+}
+html[data-page='invitecourtesy'] #ranking > div {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+html[data-page='invitecourtesy'] #ranking > div:first-child {
+  height: 1.2rem;
+  background-image: url("../img/Liu/Invite_img2.png");
+  background-size: 101.5% 100%;
+  font-size: 0.4rem;
+  color: white;
+  font-weight: 400;
+  font-family: MFLangQian_Noncommercial-Regular;
+  text-align: center;
+  line-height: 0.8rem;
+  z-index: 2;
+}
+html[data-page='invitecourtesy'] #ranking > div:last-child {
+  width: 80%;
+  height: 7.8rem;
+  background-image: url("../img/Liu/Invite_img4.png");
+  background-size: 100% 100%;
+  margin: 0 auto;
+  top: -0.5rem;
+  right: 0.05rem;
+  padding: 0.4rem 5% 0.2rem;
+}
+html[data-page='invitecourtesy'] #ranking > div:last-child > div:first-child {
+  width: 100%;
+  height: 0.5rem;
+  border-bottom: 1px solid #C5C5C5;
+}
+html[data-page='invitecourtesy'] #ranking > div:last-child > div:first-child > div {
+  float: left;
+  width: 20%;
+  height: 100%;
+  text-align: right;
+  font-size: 0.28rem;
+  color: #FC9383;
+  font-weight: 400;
+  font-family: Arial;
+}
+html[data-page='invitecourtesy'] #ranking > div:last-child > div:first-child > div:nth-child(1) {
+  width: 15%;
+  padding-left: 5%;
+  text-align: left;
+}
+html[data-page='invitecourtesy'] #ranking > div:last-child > div:first-child > div:nth-child(2) {
+  text-align: center;
+  width: 34%;
+}
+html[data-page='invitecourtesy'] #ranking > div:last-child > div:first-child > div:nth-child(4) {
+  width: 20%;
+  padding-left: 3%;
+}
+html[data-page='invitecourtesy'] #ranking > div:last-child > div:last-child {
+  width: 100%;
+  height: 7.3rem;
+  overflow-y: scroll;
+}
+html[data-page='invitecourtesy'] #ranking > div:last-child > div:last-child::-webkit-scrollbar {
+  display: none;
+}
+html[data-page='invitecourtesy'] #ranking > div:last-child > div:last-child > div {
+  width: 100%;
+  height: 0.6rem;
+  margin-bottom: 0.2rem;
+  overflow: hidden;
+}
+html[data-page='invitecourtesy'] #ranking > div:last-child > div:last-child > div:first-child {
+  margin-top: 0.2rem;
+}
+html[data-page='invitecourtesy'] #ranking > div:last-child > div:last-child > div > div {
+  line-height: 0.6rem;
+  float: left;
+  width: 20%;
+  height: 100%;
+  text-align: right;
+  font-size: 0.28rem;
+  color: #333333;
+  font-weight: bold;
+  font-family: Arial;
+}
+html[data-page='invitecourtesy'] #ranking > div:last-child > div:last-child > div > div:nth-child(1),
+html[data-page='invitecourtesy'] #ranking > div:last-child > div:last-child > div > div:nth-child(2) {
+  text-align: center;
+}
+html[data-page='invitecourtesy'] #ranking > div:last-child > div:last-child > div > div:nth-child(2) {
+  width: 34%;
+}
+html[data-page='invitecourtesy'] #ranking > div:last-child > div:last-child > div > div:nth-child(4) {
+  width: 20%;
+  padding-left: 3%;
+  color: #F4463F;
+}
+html[data-page='invitecourtesy'] #ranking > div:last-child > div:last-child > div > div.Invite1 {
+  background-image: url("../img/Liu/Invite_01.png");
+  background-size: 40% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+html[data-page='invitecourtesy'] #ranking > div:last-child > div:last-child > div > div.Invite2 {
+  background-image: url("../img/Liu/Invite_02.png");
+  background-size: 40% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+html[data-page='invitecourtesy'] #ranking > div:last-child > div:last-child > div > div.Invite3 {
+  background-image: url("../img/Liu/Invite_03.png");
+  background-size: 40% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+/***************新人注册模块***************/
+html[data-page='rookie'] {
+  background: linear-gradient(360deg, #fb6451 0%, #fb6451 100%);
+}
+html[data-page='rookie'] #background {
+  width: 100%;
+  height: 95vh;
+  background-image: url("../img/Liu/rookie_background.png");
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-top: 5vh;
+}
+html[data-page='rookie'] #background > section {
+  margin: 0 auto;
+}
+html[data-page='rookie'] #background #title {
+  width: 90%;
+  height: 1.2rem;
+  background-image: url("../img/Liu/rookie_title.png");
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-bottom: 0.1rem;
+}
+html[data-page='rookie'] #background #txt {
+  width: 60%;
+  height: 0.8rem;
+  background: linear-gradient(360deg, #fee394 0%, #fff2bb 100%);
+  border-radius: 0.4rem;
+  font-size: 0.4rem;
+  color: #FE6D5A;
+  font-weight: 400;
+  font-family: Arial;
+  text-align: center;
+  line-height: 0.8rem;
+}
+html[data-page='rookie'] #background #img {
+  width: 90%;
+  height: 3.5rem;
+  background-image: url("../img/Liu/rookie_img.png");
+  background-size: 100% 160%;
+  background-position: 50% 100%;
+  background-repeat: no-repeat;
+  margin-top: -0.3rem;
+}
+html[data-page='rookie'] #background #coupon {
+  width: 90%;
+  height: auto;
+  overflow: hidden;
+  margin-top: -0.6rem;
+  margin-bottom: 0.3rem;
+}
+html[data-page='rookie'] #background #coupon > div {
+  margin: 0 auto;
+}
+html[data-page='rookie'] #background #coupon > div:first-child {
+  width: 93%;
+  height: 6px;
+  background-color: #BF220C;
+  border: 10px solid #ED3017;
+  border-radius: 10px;
+}
+html[data-page='rookie'] #background #coupon > div:last-child {
+  width: 85.5%;
+  height: auto;
+  margin-top: -13px;
+  background-color: white;
+  box-shadow: inset 0 5px 10px #f8d7d7;
+  border-radius: 0 0 10px 10px;
+  padding: 0.3rem 3%;
+}
+html[data-page='rookie'] #background #coupon > div:last-child > div:first-child {
+  text-align: center;
+  font-size: 0.4rem;
+  color: #FB6451;
+  font-weight: 400;
+  font-family: Arial;
+  margin-bottom: 0.3rem;
+}
+html[data-page='rookie'] #background #coupon > div:last-child > div:not(:first-child) {
+  width: 100%;
+  height: 1.6rem;
+  background-image: url("../img/Liu/rookie_coupon.png");
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-bottom: 0.2rem;
+}
+html[data-page='rookie'] #background #coupon > div:last-child > div:not(:first-child) > div {
+  height: 100%;
+  float: left;
+  text-align: center;
+}
+html[data-page='rookie'] #background #coupon > div:last-child > div:not(:first-child) > div:first-child {
+  width: 40%;
+  font-size: 0.5rem;
+  color: #FB6451;
+  font-weight: 400;
+  font-family: Arial;
+  line-height: 1.6rem;
+}
+html[data-page='rookie'] #background #coupon > div:last-child > div:not(:first-child) > div:last-child {
+  width: 58%;
+  height: 1.3rem;
+  padding-top: 0.3rem;
+}
+html[data-page='rookie'] #background #coupon > div:last-child > div:not(:first-child) > div:last-child > div {
+  margin: 0 auto;
+  text-align: center;
+}
+html[data-page='rookie'] #background #coupon > div:last-child > div:not(:first-child) > div:last-child > div:first-child {
+  width: 55%;
+  height: 0.4rem;
+  border: 1px solid #ffffff;
+  border-radius: 0.2rem;
+  font-size: 0.24rem;
+  color: white;
+  font-weight: 400;
+  font-family: Arial;
+  line-height: 0.4rem;
+  margin-bottom: 0.2rem;
+}
+html[data-page='rookie'] #background #coupon > div:last-child > div:not(:first-child) > div:last-child > div:last-child {
+  font-size: 0.3rem;
+  color: white;
+  font-weight: 400;
+  font-family: Arial;
+}
+html[data-page='rookie'] #background #button {
+  width: 85%;
+  height: 0.8rem;
+  background-color: white;
+  border-radius: 0.4rem;
+  font-size: 0.36rem;
+  color: #FB6451;
+  font-weight: 400;
+  font-family: Arial;
+  text-align: center;
+  line-height: 0.8rem;
+  margin-bottom: 0.5rem;
+}
+.sk-wave {
+  margin: 40px auto;
+  width: 50px;
+  height: 40px;
+  text-align: center;
+  font-size: 10px;
+}
+.sk-wave .sk-rect {
+  background-color: #333;
+  height: 100%;
+  width: 6px;
+  display: inline-block;
+  -webkit-animation: sk-waveStretchDelay 1.2s infinite ease-in-out;
+  animation: sk-waveStretchDelay 1.2s infinite ease-in-out;
+}
+.sk-wave .sk-rect1 {
+  -webkit-animation-delay: -1.2s;
+  animation-delay: -1.2s;
+}
+.sk-wave .sk-rect2 {
+  -webkit-animation-delay: -1.1s;
+  animation-delay: -1.1s;
+}
+.sk-wave .sk-rect3 {
+  -webkit-animation-delay: -1s;
+  animation-delay: -1s;
+}
+.sk-wave .sk-rect4 {
+  -webkit-animation-delay: -0.9s;
+  animation-delay: -0.9s;
+}
+.sk-wave .sk-rect5 {
+  -webkit-animation-delay: -0.8s;
+  animation-delay: -0.8s;
+}
+@-webkit-keyframes sk-waveStretchDelay {
+  0%,
+  40%,
+  100% {
+    -webkit-transform: scaleY(0.4);
+    transform: scaleY(0.4);
+  }
+  20% {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+  }
+}
+@keyframes sk-waveStretchDelay {
+  0%,
+  40%,
+  100% {
+    -webkit-transform: scaleY(0.4);
+    transform: scaleY(0.4);
+  }
+  20% {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+  }
+}
+.mui-switch-mini {
+  width: 42px!important;
+}
+.mui-switch {
+  height: 20px!important;
+}
+.mui-switch .mui-switch-handle {
+  width: 18px !important;
+  height: 18px !important;
+  left: 0!important;
+}
+.mui-switch.mui-active {
+  border-color: #ECB452 !important;
+  background-color: #ECB452 !important;
+}

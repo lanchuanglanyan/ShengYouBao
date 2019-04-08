@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" data-page="rookie">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0,viewport-fit=cover,user-scalable=no">
+    <title>新人活动</title>
+
+
+    <!--<link rel="stylesheet/less" type="text/css" href="css/Liu.less" />-->
+    <link rel="stylesheet" type="text/css" href="css/Liu.css" />
+    <script src="js/less.js" type="text/javascript"></script>
+
+    <!--设备适配-->
+    <script src="js/rem.js"></script>
+</head>
+<body>
+<!--background-->
+<section id="background">
+
+    <!--title-->
+    <section id="title"></section>
+    <!--txt-->
+    <section id="txt">1000元见面礼</section>
+    <!--img-->
+    <section id="img"></section>
+    <!--coupon-->
+    <section id="coupon">
+        <div></div>
+        <div>
+            <div class="title">恭喜您获得</div>
+            <!--<div>-->
+                <!--<div>￥200</div>-->
+                <!--<div>-->
+                    <!--<div>体验礼包</div>-->
+                    <!--<div>满3000元使用</div>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div>-->
+                <!--<div>￥300</div>-->
+                <!--<div>-->
+                    <!--<div>体验礼包</div>-->
+                    <!--<div>满8000元使用</div>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div>-->
+                <!--<div>￥500</div>-->
+                <!--<div>-->
+                    <!--<div>体验礼包</div>-->
+                    <!--<div>满10000元使用</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        </div>
+    </section>
+    <!--button-->
+    <section id="button">一键领取</section>
+
+</section>
+<script src="js/jquery-2.2.3.min.js"></script>
+<script src="js/Liu_main.js"></script>
+<script>
+    document.addEventListener('plusready', function() {
+        var webview = plus.webview.currentWebview();
+        plus.key.addEventListener('backbutton', function() {
+            webview.canBack(function(e) {
+                if(e.canBack) {
+                    webview.back();
+                } else {
+                    webview.close(); //hide,quit
+                    //plus.runtime.quit();
+                }
+            })
+        });
+    });
+</script>
+</body>
+</html>

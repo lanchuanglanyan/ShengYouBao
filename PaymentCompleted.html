@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" data-page="paymentCompleted">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0,viewport-fit=cover,user-scalable=no">
+    <title>账户充值</title>
+
+
+    <!--<link rel="stylesheet/less" type="text/css" href="css/Liu.less" />-->
+    <link rel="stylesheet" type="text/css" href="css/Liu.css" />
+    <script src="js/less.js" type="text/javascript"></script>
+
+    <!--设备适配-->
+    <script src="js/rem.js"></script>
+</head>
+<body>
+<div id="daohang"></div>
+<!--顶部nav-->
+<section id="nav">
+    <a href="index.html"><div></div></a>
+</section>
+
+<section class="body">
+    <!--充值完成-->
+    <section id="payment">
+        <div></div>
+        <div>
+            <div>充值完成</div>
+            <div id="money"></div>
+        </div>
+    </section>
+    <!--充值信息-->
+    <section id="information">
+        <div>
+            <div>
+                <div></div>
+                <div>账户</div>
+            </div>
+            <div id="account">zeroccs666</div>
+        </div>
+        <div>
+            <div>
+                <div></div>
+                <div>到账时间</div>
+            </div>
+            <div id="time">次月当天24点前到账</div>
+        </div>
+    </section>
+    <!--确认-->
+    <section id="homepage" onclick="window.location.replace('index.html')">完成</section>
+</section>
+
+<script src="js/jquery-2.2.3.min.js"></script>
+<script src="js/Liu_main.js"></script>
+<script>
+    document.addEventListener('plusready', function() {
+        var webview = plus.webview.currentWebview();
+        plus.key.addEventListener('backbutton', function() {
+            webview.canBack(function(e) {
+                if(e.canBack) {
+                    webview.back();
+                } else {
+                    webview.close(); //hide,quit
+                    //plus.runtime.quit();
+                }
+            })
+        });
+    });
+
+
+    var data=urlSearch();
+//    alert(JSON.stringify(data));
+    $('#money').text('+'+data.money);
+    $('#account').text(data.name);
+
+    function urlSearch() {
+        var str=location.href; //取得整个地址栏
+        var num=str.split('?');
+        var arr;
+        var data={};
+        var name;
+        $.each(num,function (ind,val) {
+            if(ind>0){
+                if(val.split('&').length>1){
+                    for(var i=0;i<val.split('&').length;i++){
+                        arr=val.split('&')[i].split('=');
+                        name=arr[0];
+                        data[name]=arr[1];
+                    }
+                }else {
+                    arr=val.split('=');
+                    var name=arr[0];
+                    data[name]=arr[1];
+                }
+            }
+        });
+        return data;
+    }
+
+</script>
+</body>
+</html>

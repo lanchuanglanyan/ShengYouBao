@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" data-page="invitecourtesy">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0,viewport-fit=cover,user-scalable=no">
+    <title>邀请有礼</title>
+
+
+    <!--<link rel="stylesheet/less" type="text/css" href="css/Liu.less" />-->
+    <link rel="stylesheet" type="text/css" href="css/Liu.css" />
+    <script src="js/less.js" type="text/javascript"></script>
+
+    <!--设备适配-->
+    <script src="js/rem.js"></script>
+</head>
+<body>
+<!--banner-->
+<section id="banner">
+    <div></div>
+    <div>邀请好友成功注册并加油即可获得现金奖励</div>
+    <div></div>
+    <div></div>
+    <div id="back"></div>
+</section>
+<!--规则-->
+<section id="shunxu">
+    <div class="ban">
+        <div style='background-image: url("img/Liu/Invite_im1.png");'></div>
+        <div>我的账户</div>
+    </div>
+    <div class="li">+</div>
+    <div class="ban">
+        <div style='background-image: url("img/Liu/Invite_im2.png");'></div>
+        <div>分享好友</div>
+    </div>
+    <div class="li">+</div>
+    <div class="ban">
+        <div style='background-image: url("img/Liu/Invite_im3.png");'></div>
+        <div>好友注册<br>
+            填写手机号</div>
+    </div>
+    <div class="li">=</div>
+    <div class="ban">
+        <div style='background-image: url("img/Liu/Invite_im4.png");'></div>
+    </div>
+</section>
+<!--说明-->
+<section id="rule">
+    <div>好友首次加油3000元以下，奖励30元</div>
+    <div>好友首次加油3001-8000元，奖励80元</div>
+    <div>好友首次加油8000元以上，奖励100元</div>
+    <div>赶快让您的好友填写手机号来注册加油吧!</div>
+</section>
+<!--排行-->
+<section id="ranking">
+    <div>好友排行</div>
+    <div>
+        <div>
+            <div>排名</div>
+            <div>手机号</div>
+            <div>好友数量</div>
+            <div>金额</div>
+        </div>
+        <div id="rankingList">
+
+        </div>
+    </div>
+</section>
+
+<script src="js/jquery-2.2.3.min.js"></script>
+<script src="js/Liu_main.js"></script>
+<script>
+    document.addEventListener('plusready', function() {
+        var webview = plus.webview.currentWebview();
+        plus.key.addEventListener('backbutton', function() {
+            webview.canBack(function(e) {
+                if(e.canBack) {
+                    webview.back();
+                } else {
+                    webview.close(); //hide,quit
+                    //plus.runtime.quit();
+                }
+            })
+        });
+    });
+</script>
+</body>
+</html>

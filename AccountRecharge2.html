@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" data-page="accountRecharge2">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0,viewport-fit=cover,user-scalable=no">
+    <title>账户充值</title>
+
+
+    <!--<link rel="stylesheet/less" type="text/css" href="css/Liu.less" />-->
+    <link rel="stylesheet" type="text/css" href="css/Liu.css" />
+    <script src="js/less.js" type="text/javascript"></script>
+
+    <!--设备适配-->
+    <script src="js/rem.js"></script>
+</head>
+<body>
+<div id="daohang"></div>
+<!--顶部nav-->
+<section id="nav">
+    <!--<div id="back"></div>-->
+    <a href="AccountRecharge1.html"><div></div></a>
+    <div></div>
+</section>
+
+<section class="body">
+    <!--到账金额-->
+    <section id="money">
+        <div>充值金额</div>
+        <div></div>
+    </section>
+    <!--到账明细-->
+    <section id="bill">
+        <div>
+            <div>到账明细</div>
+            <div class="bill">次月当日到账<span>></span></div>
+        </div>
+        <div class="bills">
+            <div class="back">取消</div>
+            <div class="billsK">
+                <div><div>到账时间</div><div>到账金额</div></div>
+                <div class="biLLs">
+                    <div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--优惠券-->
+    <section id="coupon">
+        <div>
+            <div>优惠券</div>
+            <div class="bill">暂无优惠券可用<span>></span></div>
+        </div>
+        <div class="bills">
+            <div class="back">取消</div>
+            <div class="billsK">
+                <div><div>优惠券门槛</div><div>优惠券面值</div></div>
+                <div class="biLLs">
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--支付方式-->
+    <section id="paymentMethod">
+        <div>支付方式</div>
+        <div>
+            <div class="Alipay">
+                <div></div>
+                <div>支付宝</div>
+                <div>
+                    <input type="radio" checked name="fukuan" id="alipay" data-type="1">
+                    <label for="alipay"></label>
+                </div>
+            </div>
+            <div class="WeChat">
+                <div></div>
+                <div>微信支付</div>
+                <div>
+                    <input type="radio" name="fukuan" id="weChat" data-type="2">
+                    <label for="weChat"></label>
+                </div>
+            </div>
+            <p>点击充值即同意<a href="javascript:void(0)">《充值协议》</a></p>
+        </div>
+    </section>
+    <!--充值-->
+    <section id="rechargeGo">充&nbsp;值</section>
+
+</section>
+
+<script src="js/jquery-2.2.3.min.js"></script>
+<script src="js/Liu_main.js"></script>
+
+<script>
+    document.addEventListener('plusready', function() {
+        var webview = plus.webview.currentWebview();
+        plus.key.addEventListener('backbutton', function() {
+            webview.canBack(function(e) {
+                if(e.canBack) {
+                    webview.back();
+                } else {
+                    webview.close(); //hide,quit
+                    //plus.runtime.quit();
+                }
+            })
+        });
+    });
+</script>
+</body>
+</html>
